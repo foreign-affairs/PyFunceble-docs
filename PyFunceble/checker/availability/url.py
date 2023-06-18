@@ -129,15 +129,26 @@ class URLAvailabilityChecker(AvailabilityCheckerBase):
 
         return self
 
-    def try_to_query_status_from_http_status_code(self) -> "URLAvailabilityChecker":
+    def try_to_query_status_from_http_status_code(
+        self, *, from_domain_test: bool = False
+    ) -> "URLAvailabilityChecker":
         """
         Tries to query the status from the network information.
+
+        :param bool from_domain_test:
+            Whether we wanted to test a test - actually.
+
+            Setting this argument to :py:class:`True` will exit the http_status_code
+            test if the given subject is already a URL.
         """
 
         PyFunceble.facility.Logger.info(
             "Started to try to query the status of %r from: HTTP Status code Lookup",
             self.status.idna_subject,
         )
+
+        if from_domain_test and self.status.url_syntax:
+            return self
 
         lookup_result = self.http_status_code_query_tool.get_status_code()
 
