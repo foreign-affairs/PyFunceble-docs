@@ -225,7 +225,7 @@ def get_subjects_from_line(
         result.extend(
             # pylint: disable=line-too-long
             adblock_inputline2subject.set_aggressive(
-                bool(PyFunceble.storage.CONFIGURATION.cli_decoding.adblock_aggressive)
+                bool(PyFunceble.storage.CONFIGURATION.cli_decoding.aggressive)
             )
             .set_data_to_convert(line)
             .get_converted()
