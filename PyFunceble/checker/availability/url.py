@@ -251,7 +251,7 @@ class URLAvailabilityChecker(AvailabilityCheckerBase):
         status_post_syntax_checker = None
 
         if not self.status.status and self.do_syntax_check_first:
-            self.try_to_query_status_from_syntax_lookup()
+            self.try_to_query_status_from_syntax_lookup(from_url_test=True)
 
             if self.status.status:
                 status_post_syntax_checker = self.status.status
@@ -261,7 +261,10 @@ class URLAvailabilityChecker(AvailabilityCheckerBase):
         ):
             self.try_to_query_status_from_reputation()
 
-        if self.should_we_continue_test(status_post_syntax_checker):
+        if (
+            self.should_we_continue_test(status_post_syntax_checker)
+            and self.status.url_syntax
+        ):
             self.try_to_query_status_from_dns()
 
         if self.should_we_continue_test(status_post_syntax_checker):
