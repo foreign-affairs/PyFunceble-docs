@@ -62,8 +62,12 @@ except (ModuleNotFoundError, ImportError):  # pragma: no cover
     except (ModuleNotFoundError, ImportError):
         from ... import pyf_test_dataset
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestIPv4SyntaxChecker(unittest.TestCase):
+class TestIPv4SyntaxChecker(PyFuncebleTestsBase):
     """
     Tests of our IPv4 syntax checker.
     """

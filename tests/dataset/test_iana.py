@@ -59,8 +59,13 @@ import unittest.mock
 from PyFunceble.dataset.base import DatasetBase
 from PyFunceble.dataset.iana import IanaDataset
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ..pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestIanaDataset(unittest.TestCase):
+
+class TestIanaDataset(PyFuncebleTestsBase):
     """
     Tests the iana dataset interaction.
     """
@@ -70,23 +75,11 @@ class TestIanaDataset(unittest.TestCase):
         Setups everything needed by the tests.
         """
 
+        super().setUp()
+
         self.tempfile = tempfile.NamedTemporaryFile()
 
-        self.our_dataset = {
-            "aaa": "whois.nic.aaa",
-            "aarp": "whois.nic.aarp",
-            "abarth": "whois.afilias-srs.net",
-            "abb": "whois.nic.abb",
-            "abbott": "whois.afilias-srs.net",
-            "abbvie": "whois.afilias-srs.net",
-            "abc": "whois.nic.abc",
-            "able": "whois.nic.able",
-            "abogado": "whois.nic.abogado",
-            "abudhabi": "whois.nic.abudhabi",
-            "ac": "whois.nic.ac",
-        }
-
-        self.tempfile.write(json.dumps(self.our_dataset).encode())
+        self.tempfile.write(json.dumps(self.IANA_DATASET).encode())
         self.tempfile.seek(0)
 
         self.iana_dataset = IanaDataset()
@@ -94,18 +87,18 @@ class TestIanaDataset(unittest.TestCase):
 
         self.get_content_patch = unittest.mock.patch.object(DatasetBase, "get_content")
         self.mock_get_content = self.get_content_patch.start()
-        self.mock_get_content.return_value = copy.deepcopy(self.our_dataset)
+        self.mock_get_content.return_value = copy.deepcopy(self.IANA_DATASET)
 
     def tearDown(self) -> None:
         """
-        Destroys everything needed by the tests.
+        Tests the iana dataset interaction.
         """
 
         self.get_content_patch.stop()
         del self.mock_get_content
         del self.tempfile
-        del self.our_dataset
         del self.iana_dataset
+        super().tearDown()
 
     def test_contains(self) -> None:
         """
@@ -139,7 +132,7 @@ class TestIanaDataset(unittest.TestCase):
         dataset.
         """
 
-        given = "com"
+        given = "saarlands"
 
         expected = False
         actual = given in self.iana_dataset

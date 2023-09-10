@@ -54,8 +54,14 @@ import unittest
 
 from PyFunceble.checker.syntax.domain_base import DomainSyntaxCheckerBase
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestSDomainSyntaxCheckerBase(unittest.TestCase):
+
+
+class TestSDomainSyntaxCheckerBase(PyFuncebleTestsBase):
     """
     Tests of the base of all our domain syntax checker.
     """
@@ -65,6 +71,7 @@ class TestSDomainSyntaxCheckerBase(unittest.TestCase):
         Setups everything we need.
         """
 
+        super().setUp()
         self.checker = DomainSyntaxCheckerBase()
 
     def tearDown(self) -> None:
@@ -73,6 +80,7 @@ class TestSDomainSyntaxCheckerBase(unittest.TestCase):
         """
 
         del self.checker
+        super().tearDown()
 
     def test_get_last_point_index(self) -> None:
         """

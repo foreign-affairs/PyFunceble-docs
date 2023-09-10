@@ -60,8 +60,13 @@ from PyFunceble.config.loader import ConfigLoader
 from PyFunceble.dataset.base import DatasetBase
 from PyFunceble.dataset.user_agent import UserAgentDataset
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ..pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestUserAgentDataset(unittest.TestCase):
+
+class TestUserAgentDataset(PyFuncebleTestsBase):
     """
     Tests the user agent dataset interaction.
     """
@@ -71,69 +76,13 @@ class TestUserAgentDataset(unittest.TestCase):
         Setups everything needed by the tests.
         """
 
+        super().setUp()
+
         self.config_loader = ConfigLoader()
 
         self.tempfile = tempfile.NamedTemporaryFile()
 
-        self.our_dataset = {
-            "chrome": {
-                "linux": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/77.0.3865.116 "
-                "Safari/537.36 Edg/77.11.4.5118",
-                "macosx": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4364.0 "
-                "Safari/537.36",
-                "win10": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4361.0 "
-                "Safari/537.36",
-            },
-            "edge": {
-                "linux": None,
-                "macosx": None,
-                "win10": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 "
-                "Safari/537.36 Edge/18.17763/5.9.7 (Linux;Android 10) "
-                "ExoPlayerLib/2.9.6",
-            },
-            "firefox": {
-                "linux": "Mozilla/5.0 (Linux x86_64; en-US) Gecko/20130401 "
-                "Firefox/82.4",
-                "macosx": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0; "
-                "en-US) Gecko/20100101 Firefox/74.7",
-                "win10": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) "
-                "Gecko/20100101 Firefox/84.0/8mqDiPuL-36",
-            },
-            "ie": {
-                "linux": None,
-                "macosx": None,
-                "win10": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; "
-                "Win64; x64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR "
-                "2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Tablet "
-                "PC 2.0; wbx 1.0.0; wbxapp 1.0.0)",
-            },
-            "opera": {
-                "linux": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 "
-                "OPR/73.0.3856.284",
-                "macosx": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 "
-                "Safari/537.36 OPR/72.0.3815.400",
-                "win10": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 "
-                "Safari/537.36 OPR/73.0.3856.284 (Edition avira-2)",
-            },
-            "safari": {
-                "linux": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 "
-                "Safari/537.36 SputnikBrowser/1.2.5.158",
-                "macosx": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) "
-                "AppleWebKit/600.8.9 (KHTML, like Gecko) Version/9.0.3 "
-                "Safari/601.4.4",
-                "win10": None,
-            },
-        }
-
-        self.tempfile.write(json.dumps(self.our_dataset).encode())
+        self.tempfile.write(json.dumps(self.USER_AGENT_DATASET).encode())
         self.tempfile.seek(0)
 
         self.user_agent_dataset = UserAgentDataset()
@@ -141,7 +90,7 @@ class TestUserAgentDataset(unittest.TestCase):
 
         self.get_content_patch = unittest.mock.patch.object(DatasetBase, "get_content")
         self.mock_get_content = self.get_content_patch.start()
-        self.mock_get_content.return_value = copy.deepcopy(self.our_dataset)
+        self.mock_get_content.return_value = copy.deepcopy(self.USER_AGENT_DATASET)
 
     def tearDown(self) -> None:
         """
@@ -151,9 +100,10 @@ class TestUserAgentDataset(unittest.TestCase):
         self.get_content_patch.stop()
         del self.mock_get_content
         del self.tempfile
-        del self.our_dataset
         del self.config_loader
         del self.user_agent_dataset
+
+        super().tearDown()
 
     def test_contains(self) -> None:
         """
@@ -187,7 +137,7 @@ class TestUserAgentDataset(unittest.TestCase):
         """
 
         given = "chrome"
-        expected = copy.deepcopy(self.our_dataset[given])
+        expected = copy.deepcopy(self.USER_AGENT_DATASET[given])
 
         actual = self.user_agent_dataset[given]
 
@@ -391,7 +341,7 @@ class TestUserAgentDataset(unittest.TestCase):
         given_browser = "chrome"
         given_platform = "win10"
 
-        expected = self.our_dataset[given_browser][given_platform]
+        expected = self.USER_AGENT_DATASET[given_browser][given_platform]
 
         self.user_agent_dataset.set_prefered(given_browser, given_platform)
 
@@ -413,7 +363,7 @@ class TestUserAgentDataset(unittest.TestCase):
         }
         self.config_loader.start()
 
-        expected = self.our_dataset[given_browser][given_platform]
+        expected = self.USER_AGENT_DATASET[given_browser][given_platform]
 
         actual = self.user_agent_dataset.get_latest()
 

@@ -50,6 +50,8 @@ License:
     limitations under the License.
 """
 
+import json
+import os
 from typing import List
 
 VALID_SECOND_LVL_DOMAINS: List[str] = [
@@ -466,3 +468,21 @@ DEFAULT_CONFIG: dict = {
     "user_agent": {"browser": "chrome", "custom": None, "platform": "linux"},
     "verify_ssl_certificate": False,
 }
+
+
+with open(
+    os.path.join(os.path.dirname(__file__), "data", "iana-domains-db.json")
+) as fs:
+    IANA_DATASETS = json.loads(fs.read())
+
+with open(
+    os.path.join(os.path.dirname(__file__), "data", "public-suffix.json")
+) as fs:
+    PSL_DATASETS = json.loads(fs.read())
+
+
+with open(
+    os.path.join(os.path.dirname(__file__), "data", "user_agents.json")
+) as fs:
+    USER_AGENT_DATASETS = json.loads(fs.read())
+

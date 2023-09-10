@@ -57,13 +57,14 @@ from PyFunceble.checker.syntax.second_lvl_domain import SecondLvlDomainSyntaxChe
 try:
     import pyf_test_dataset
 except (ModuleNotFoundError, ImportError):  # pragma: no cover
-    try:
-        from .. import pyf_test_dataset
-    except (ModuleNotFoundError, ImportError):
-        from ... import pyf_test_dataset
+    from ... import pyf_test_dataset
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestSecondLvlDomainSyntaxChecker(unittest.TestCase):
+class TestSecondLvlDomainSyntaxChecker(PyFuncebleTestsBase):
     """
     Tests of our second level domain syntax checker.
     """

@@ -54,8 +54,13 @@ import unittest
 
 from PyFunceble.checker.syntax.status import SyntaxCheckerStatus
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestSyntaxCheckerStatus(unittest.TestCase):
+
+class TestSyntaxCheckerStatus(PyFuncebleTestsBase):
     """
     Tests of our status handler.
     """

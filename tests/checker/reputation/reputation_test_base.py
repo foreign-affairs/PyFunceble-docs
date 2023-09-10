@@ -57,8 +57,13 @@ from typing import List, Optional
 
 from PyFunceble.checker.reputation.base import ReputationCheckerBase
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class ReputationCheckerTestBase(unittest.TestCase):
+
+class ReputationCheckerTestBase(PyFuncebleTestsBase):
     """
     Tests of the base of all our reputation checker.
     """
@@ -68,6 +73,7 @@ class ReputationCheckerTestBase(unittest.TestCase):
         Setups everything we need.
         """
 
+        super().setUp()
         self.checker = ReputationCheckerBase()
 
         self.tempfile = tempfile.NamedTemporaryFile("wb", delete=False)
@@ -100,6 +106,7 @@ class ReputationCheckerTestBase(unittest.TestCase):
         os.unlink(self.tempfile.name)
 
         del self.checker
+        super().tearDown()
 
     @staticmethod
     def fake_query_a_record(*args, **kwargs) -> Optional[List[str]]:

@@ -57,13 +57,15 @@ from PyFunceble.checker.syntax.url import URLSyntaxChecker
 try:
     import pyf_test_dataset
 except (ModuleNotFoundError, ImportError):  # pragma: no cover
-    try:
-        from .. import pyf_test_dataset
-    except (ModuleNotFoundError, ImportError):
-        from ... import pyf_test_dataset
+    from ... import pyf_test_dataset
+
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
 
-class TestURLSyntaxChecker(unittest.TestCase):
+class TestURLSyntaxChecker(PyFuncebleTestsBase):
     """
     Tests of our URL syntax checker.
     """

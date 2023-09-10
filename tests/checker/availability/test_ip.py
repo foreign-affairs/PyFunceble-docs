@@ -58,8 +58,13 @@ from PyFunceble.checker.availability.ip import IPAvailabilityChecker
 from PyFunceble.checker.reputation.ip import IPReputationChecker
 from PyFunceble.checker.reputation.status import ReputationCheckerStatus
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestIPAvailabilityChecker(unittest.TestCase):
+
+class TestIPAvailabilityChecker(PyFuncebleTestsBase):
     """
     Tests of our IP availability checker.
     """
@@ -69,6 +74,7 @@ class TestIPAvailabilityChecker(unittest.TestCase):
         Setups everything needed for the tests.
         """
 
+        super().setUp()
         self.checker = IPAvailabilityChecker()
 
     def tearDown(self) -> None:
@@ -77,6 +83,7 @@ class TestIPAvailabilityChecker(unittest.TestCase):
         """
 
         del self.checker
+        super().tearDown()
 
     @unittest.mock.patch.object(IPReputationChecker, "get_status")
     def test_try_to_query_status_from_reputation(

@@ -58,8 +58,12 @@ from PyFunceble.checker.availability.domain import DomainAvailabilityChecker
 from PyFunceble.checker.reputation.domain import DomainReputationChecker
 from PyFunceble.checker.reputation.status import ReputationCheckerStatus
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestDomainAvailabilityChecker(unittest.TestCase):
+class TestDomainAvailabilityChecker(PyFuncebleTestsBase):
     """
     Tests of our domain availability checker.
     """
@@ -69,6 +73,7 @@ class TestDomainAvailabilityChecker(unittest.TestCase):
         Setups everything needed for the tests.
         """
 
+        super().setUp()
         self.checker = DomainAvailabilityChecker()
 
     def tearDown(self) -> None:
@@ -77,6 +82,7 @@ class TestDomainAvailabilityChecker(unittest.TestCase):
         """
 
         del self.checker
+        super().tearDown()
 
     @unittest.mock.patch.object(DomainReputationChecker, "get_status")
     def test_try_to_query_status_from_reputation(

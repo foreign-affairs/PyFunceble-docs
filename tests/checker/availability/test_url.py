@@ -58,8 +58,12 @@ from PyFunceble.checker.availability.url import URLAvailabilityChecker
 from PyFunceble.checker.reputation.status import ReputationCheckerStatus
 from PyFunceble.checker.reputation.url import URLReputationChecker
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestURLAvailabilityChecker(unittest.TestCase):
+class TestURLAvailabilityChecker(PyFuncebleTestsBase):
     """
     Tests our URL availability checker.
     """
@@ -69,6 +73,7 @@ class TestURLAvailabilityChecker(unittest.TestCase):
         Setups everything needed for the tests.
         """
 
+        super().setUp()
         self.checker = URLAvailabilityChecker()
 
     def tearDown(self) -> None:
@@ -77,6 +82,7 @@ class TestURLAvailabilityChecker(unittest.TestCase):
         """
 
         del self.checker
+        super().tearDown()
 
     def test_subject_propagator(self) -> None:
         """

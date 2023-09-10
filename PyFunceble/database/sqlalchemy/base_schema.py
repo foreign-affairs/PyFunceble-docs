@@ -54,7 +54,8 @@ from datetime import datetime
 
 import inflection
 from sqlalchemy import BigInteger, Column, DateTime
-from sqlalchemy.ext.declarative import declarative_base, declared_attr
+from sqlalchemy.ext.declarative import declared_attr
+from sqlalchemy.orm import declarative_base
 
 import PyFunceble.storage
 

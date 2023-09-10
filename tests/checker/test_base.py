@@ -55,8 +55,13 @@ import unittest
 from PyFunceble.checker.base import CheckerBase, CheckerStatusBase
 from PyFunceble.config.loader import ConfigLoader
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ..pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestCheckerBase(unittest.TestCase):
+
+class TestCheckerBase(PyFuncebleTestsBase):
     """
     Tests of the base of all our checker.
     """
@@ -66,7 +71,9 @@ class TestCheckerBase(unittest.TestCase):
         Setups everything we need.
         """
 
+        super().setUp()
         self.checker = CheckerBase()
+
 
     def tearDown(self) -> None:
         """
@@ -74,6 +81,7 @@ class TestCheckerBase(unittest.TestCase):
         """
 
         del self.checker
+        super().setUp()
 
     def test_set_subject_return(self) -> None:
         """

@@ -55,8 +55,13 @@ import unittest.mock
 
 from PyFunceble.checker.availability.status import AvailabilityCheckerStatus
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestAvailabilityCheckerStatus(unittest.TestCase):
+
+class TestAvailabilityCheckerStatus(PyFuncebleTestsBase):
     """
     Tests of our availability status handler.
     """
@@ -66,6 +71,7 @@ class TestAvailabilityCheckerStatus(unittest.TestCase):
         Setups everything we need.
         """
 
+        super().setUp()
         self.status = AvailabilityCheckerStatus(subject="example.org")
 
     def tearDown(self) -> None:
@@ -74,6 +80,7 @@ class TestAvailabilityCheckerStatus(unittest.TestCase):
         """
 
         del self.status
+        super().tearDown()
 
     def test_is_special(self) -> None:
         """

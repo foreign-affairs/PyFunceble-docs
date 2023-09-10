@@ -63,7 +63,13 @@ from PyFunceble.query.dns.query_tool import DNSQueryTool
 from PyFunceble.query.whois.query_tool import WhoisQueryTool
 
 
-class TestAvailabilityCheckerBase(unittest.TestCase):
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
+
+
+class TestAvailabilityCheckerBase(PyFuncebleTestsBase):
     """
     The tests of our availability checker base.
     """
@@ -73,6 +79,7 @@ class TestAvailabilityCheckerBase(unittest.TestCase):
         Setups everything needed for the tests.
         """
 
+        super().setUp()
         self.checker = AvailabilityCheckerBase()
 
     def tearDown(self) -> None:
@@ -81,6 +88,7 @@ class TestAvailabilityCheckerBase(unittest.TestCase):
         """
 
         del self.checker
+        super().tearDown()
 
     def test_set_use_extra_rules_return(self) -> None:
         """

@@ -57,13 +57,14 @@ from PyFunceble.checker.syntax.ip import IPSyntaxChecker
 try:
     import pyf_test_dataset
 except (ModuleNotFoundError, ImportError):  # pragma: no cover
-    try:
-        from .. import pyf_test_dataset
-    except (ModuleNotFoundError, ImportError):
-        from ... import pyf_test_dataset
+    from ... import pyf_test_dataset
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestIPSyntaxChecker(unittest.TestCase):
+class TestIPSyntaxChecker(PyFuncebleTestsBase):
     """
     Tests of our IP (v4 and v6) syntax checker.
     """

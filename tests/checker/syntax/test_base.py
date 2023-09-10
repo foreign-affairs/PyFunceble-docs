@@ -54,6 +54,11 @@ import unittest
 
 from PyFunceble.checker.syntax.base import SyntaxCheckerBase
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
+
 
 class TestSyntaxCheckerBase(unittest.TestCase):
     """
@@ -65,6 +70,7 @@ class TestSyntaxCheckerBase(unittest.TestCase):
         Setups everything we need.
         """
 
+        super().setUp()
         self.checker = SyntaxCheckerBase()
 
     def tearDown(self) -> None:
@@ -73,6 +79,7 @@ class TestSyntaxCheckerBase(unittest.TestCase):
         """
 
         del self.checker
+        super().tearDown()
 
     def test_subject_propagator(self) -> None:
         """

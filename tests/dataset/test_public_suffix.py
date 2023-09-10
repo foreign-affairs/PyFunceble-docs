@@ -59,8 +59,13 @@ import unittest.mock
 from PyFunceble.dataset.base import DatasetBase
 from PyFunceble.dataset.public_suffix import PublicSuffixDataset
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ..pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestPublicSuffixDataset(unittest.TestCase):
+
+class TestPublicSuffixDataset(PyFuncebleTestsBase):
     """
     Tests the public suffix dataset interaction.
     """
@@ -72,13 +77,7 @@ class TestPublicSuffixDataset(unittest.TestCase):
 
         self.tempfile = tempfile.NamedTemporaryFile()
 
-        self.our_dataset = {
-            "ac": ["com.ac", "edu.ac", "gov.ac", "mil.ac", "net.ac", "org.ac"],
-            "academy": ["official.academy"],
-            "ad": ["nom.ad"],
-        }
-
-        self.tempfile.write(json.dumps(self.our_dataset).encode())
+        self.tempfile.write(json.dumps(self.PSL_DATASET).encode())
         self.tempfile.seek(0)
 
         self.ps_dataset = PublicSuffixDataset()
@@ -86,7 +85,7 @@ class TestPublicSuffixDataset(unittest.TestCase):
 
         self.get_content_patch = unittest.mock.patch.object(DatasetBase, "get_content")
         self.mock_get_content = self.get_content_patch.start()
-        self.mock_get_content.return_value = copy.deepcopy(self.our_dataset)
+        self.mock_get_content.return_value = copy.deepcopy(self.PSL_DATASET)
 
     def tearDown(self) -> None:
         """
@@ -94,7 +93,6 @@ class TestPublicSuffixDataset(unittest.TestCase):
         """
 
         del self.tempfile
-        del self.our_dataset
         del self.ps_dataset
 
         self.get_content_patch.stop()
@@ -133,7 +131,7 @@ class TestPublicSuffixDataset(unittest.TestCase):
         dataset.
         """
 
-        given = "com"
+        given = "saarland"
 
         expected = False
         actual = given in self.ps_dataset
@@ -145,7 +143,7 @@ class TestPublicSuffixDataset(unittest.TestCase):
         Tests the method which let us (indirectly) get the available subdataset.
         """
 
-        expected = copy.deepcopy(self.our_dataset["ad"])
+        expected = copy.deepcopy(self.PSL_DATASET["ad"])
         actual = self.ps_dataset["ad"]
 
         self.assertEqual(expected, actual)
@@ -155,7 +153,7 @@ class TestPublicSuffixDataset(unittest.TestCase):
         Tests the method which let us (indirectly) get the available subdataset.
         """
 
-        expected = copy.deepcopy(self.our_dataset["ad"])
+        expected = copy.deepcopy(self.PSL_DATASET["ad"])
         actual = self.ps_dataset[".ad"]
 
         self.assertEqual(expected, actual)
@@ -176,7 +174,7 @@ class TestPublicSuffixDataset(unittest.TestCase):
         Tests the method which let us (indirectly) get the available subdataset.
         """
 
-        expected = copy.deepcopy(self.our_dataset["ad"])
+        expected = copy.deepcopy(self.PSL_DATASET["ad"])
         actual = self.ps_dataset.ad
 
         self.assertEqual(expected, actual)
@@ -227,7 +225,7 @@ class TestPublicSuffixDataset(unittest.TestCase):
         given extension.
         """
 
-        expected = copy.deepcopy(self.our_dataset["ad"])
+        expected = copy.deepcopy(self.PSL_DATASET["ad"])
         actual = self.ps_dataset.get_available_suffix("ad")
 
         self.assertEqual(expected, actual)
