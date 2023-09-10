@@ -211,13 +211,17 @@ class TestNameserver(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
+    @unittest.mock.patch.object(dns.resolver.Resolver, "read_resolv_conf")
     @unittest.mock.patch.object(dns.resolver.Resolver, "resolve")
-    def test_get_ip_from_nameserver(self, resolver_patch) -> None:
+    def test_get_ip_from_nameserver(
+        self, resolver_patch, read_resolvconf_patch
+    ) -> None:
         """
         Tests the method which let us get the IP from a nameserver.
         """
 
         resolver_patch.side_effect = self.fake_resolver
+        read_resolvconf_patch.return_value = None
 
         given = "example.org"
 
@@ -260,13 +264,15 @@ class TestNameserver(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
+    @unittest.mock.patch.object(dns.resolver.Resolver, "read_resolv_conf")
     @unittest.mock.patch.object(dns.resolver.Resolver, "resolve")
-    def test_set_nameservers(self, resolver_patch) -> None:
+    def test_set_nameservers(self, resolver_patch, read_resolvconf_patch) -> None:
         """
         Tests the method which let us set the nameserver to work with.
         """
 
         resolver_patch.side_effect = self.fake_resolver
+        read_resolvconf_patch.return_value = None
 
         given = ["example.org:53"]
 
@@ -291,14 +297,18 @@ class TestNameserver(unittest.TestCase):
         self.assertEqual(expected_nameserver, actual)
         self.assertEqual(expected_nameserver_port, actual_nameserver_port)
 
+    @unittest.mock.patch.object(dns.resolver.Resolver, "read_resolv_conf")
     @unittest.mock.patch.object(dns.resolver.Resolver, "resolve")
-    def test_set_nameservers_through_init(self, resolver_patch) -> None:
+    def test_set_nameservers_through_init(
+        self, resolver_patch, read_resolvconf_patch
+    ) -> None:
         """
         Tests the method which let us set the nameserver from the contributor
         method.
         """
 
         resolver_patch.side_effect = self.fake_resolver
+        read_resolvconf_patch.return_value = None
 
         given = ["example.org:53"]
 
@@ -427,13 +437,17 @@ class TestNameserver(unittest.TestCase):
 
         self.assertRaises(ValueError, lambda: Nameservers().set_nameservers(given))
 
+    @unittest.mock.patch.object(dns.resolver.Resolver, "read_resolv_conf")
     @unittest.mock.patch.object(dns.resolver.Resolver, "resolve")
-    def test_guess_and_set_nameservers(self, resolver_patch) -> None:
+    def test_guess_and_set_nameservers(
+        self, resolver_patch, read_resolvconf_patch
+    ) -> None:
         """
         Tests the method which let us guess the nameserver to use.
         """
 
         resolver_patch.side_effect = self.fake_resolver
+        read_resolvconf_patch.return_value = None
 
         given = ["example.org:53"]
 

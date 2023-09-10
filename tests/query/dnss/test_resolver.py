@@ -59,8 +59,13 @@ import dns.resolver
 from PyFunceble.config.loader import ConfigLoader
 from PyFunceble.query.dns.resolver import Resolver
 
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
-class TestResolver(unittest.TestCase):
+
+class TestResolver(PyFuncebleTestsBase):
     """
     Provides the tests of our resolver configurator.
     """
@@ -69,6 +74,8 @@ class TestResolver(unittest.TestCase):
         """
         Setups everything needed for the tests.
         """
+
+        super().setUp()
 
         def fake_response(data: str) -> object:
             return dataclasses.make_dataclass(
@@ -108,13 +115,17 @@ class TestResolver(unittest.TestCase):
 
         del self.resolver_provider
 
-    def test_set_nameservers(self) -> None:
+        super().tearDown()
+
+    @unittest.mock.patch.object(dns.resolver.Resolver, "read_resolv_conf")
+    def test_set_nameservers(self, read_resolvconf_patch) -> None:
         """
         Tests the method which let us set the nameservers to work with.
         """
 
         given = ["example.org"]
 
+        read_resolvconf_patch.return_value = None
         self.resolver_provider.set_nameservers(given)
 
         expected = [
@@ -137,7 +148,8 @@ class TestResolver(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
-    def test_set_nameservers_through_init(self) -> None:
+    @unittest.mock.patch.object(dns.resolver.Resolver, "read_resolv_conf")
+    def test_set_nameservers_through_init(self, read_resolvconf_patch) -> None:
         """
         Tests the method which let us set the nameservers to work with.
 
@@ -147,6 +159,7 @@ class TestResolver(unittest.TestCase):
 
         given = ["example.org"]
 
+        read_resolvconf_patch.return_value = None
         resolver_provider = Resolver(nameservers=given)
 
         expected = [
@@ -225,10 +238,13 @@ class TestResolver(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
-    def test_get_resolver(self) -> None:
+    @unittest.mock.patch.object(dns.resolver.Resolver, "read_resolv_conf")
+    def test_get_resolver(self, read_resolv_conf) -> None:
         """
         Tests the method which let us get the configured resolver.
         """
+
+        read_resolv_conf.return_value = None
 
         self.resolver_provider.set_nameservers(["example.org"])
         self.resolver_provider.set_timeout(5.0)
@@ -260,7 +276,3 @@ class TestResolver(unittest.TestCase):
         the_second_resolver = self.resolver_provider.get_resolver()
 
         self.assertEqual(id(the_resolver), id(the_second_resolver))
-
-
-if __name__ == "__main__":
-    unittest.main()

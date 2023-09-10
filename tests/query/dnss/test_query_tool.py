@@ -62,12 +62,19 @@ import dns.name
 import dns.query
 
 from PyFunceble.config.loader import ConfigLoader
+from PyFunceble.query.dns.nameserver import Nameservers
 from PyFunceble.query.dns.query_tool import DNSQueryTool, DNSQueryToolRecord
+
+try:
+    from pyfunceble_tests_base import PyFuncebleTestsBase
+except ModuleNotFoundError:  # pragma: no cover
+    from ...pyfunceble_tests_base import PyFuncebleTestsBase
+
 
 # pylint: disable=protected-access, too-many-lines
 
 
-class TestDNSQueryTool(unittest.TestCase):
+class TestDNSQueryTool(PyFuncebleTestsBase):
     """
     Tests our DNS query tool.
     """
@@ -76,6 +83,8 @@ class TestDNSQueryTool(unittest.TestCase):
         """
         Setups everything needed for the tests.
         """
+
+        super().setUp()
 
         def fake_response(data: str) -> object:
             return dataclasses.make_dataclass(
@@ -97,6 +106,20 @@ class TestDNSQueryTool(unittest.TestCase):
         self.resolve_patch = unittest.mock.patch.object(
             dns.resolver.Resolver, "resolve"
         )
+
+        self.nameservers_ports_patch = unittest.mock.patch.object(
+            Nameservers, "get_nameserver_ports"
+        )
+        self.nameservers_ns_patch = unittest.mock.patch.object(
+            Nameservers, "get_nameservers"
+        )
+
+        self.mock_ns_ns = self.nameservers_ns_patch.start()
+        self.mock_ns_ns.return_value = ["192.168.1.1", "10.47.91.9"]
+
+        self.mock_ns_ports = self.nameservers_ports_patch.start()
+        self.mock_ns_ports.return_value = {"192.168.1.1": 53, "10.47.91.9": 53}
+
         self.udp_query_patch = unittest.mock.patch.object(dns.query, "udp")
         self.tcp_query_patch = unittest.mock.patch.object(dns.query, "tcp")
         self.https_query_patch = unittest.mock.patch.object(dns.query, "https")
@@ -125,17 +148,25 @@ class TestDNSQueryTool(unittest.TestCase):
         self.https_query_patch.stop()
         self.tls_query_patch.stop()
 
+        self.nameservers_ports_patch.stop()
+        self.nameservers_ns_patch.stop()
+
         del self.resolve_patch
         del self.udp_query_patch
         del self.tcp_query_patch
         del self.https_query_patch
         del self.tls_query_patch
+        del self.nameservers_ports_patch
 
         del self.mock_resolve
         del self.mock_udp_query
         del self.mock_tcp_query
         del self.mock_https_query
         del self.mock_tls_query
+        del self.mock_ns_ports
+        del self.mock_ns_ns
+
+        super().tearDown()
 
     @staticmethod
     def timout_response(*args, **kwargs) -> None:

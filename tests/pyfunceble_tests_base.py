@@ -68,7 +68,7 @@ except (ModuleNotFoundError, ImportError):  # pragma: no cover
 
 class PyFuncebleTestsBase(unittest.TestCase):
     """
-    Use when you want to avoid using the network to fetch crutial datasets.
+    Use when you want to avoid using the network to fetch crucial datasets.
     """
 
     IANA_DATASET = pyf_test_dataset.IANA_DATASETS
