@@ -74,7 +74,6 @@ class TestCheckerBase(PyFuncebleTestsBase):
         super().setUp()
         self.checker = CheckerBase()
 
-
     def tearDown(self) -> None:
         """
         Destroyes everything we don't need.

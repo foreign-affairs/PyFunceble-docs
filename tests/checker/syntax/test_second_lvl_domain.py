@@ -64,6 +64,7 @@ try:
 except ModuleNotFoundError:  # pragma: no cover
     from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
+
 class TestSecondLvlDomainSyntaxChecker(PyFuncebleTestsBase):
     """
     Tests of our second level domain syntax checker.

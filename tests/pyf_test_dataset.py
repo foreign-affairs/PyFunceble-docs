@@ -471,18 +471,20 @@ DEFAULT_CONFIG: dict = {
 
 
 with open(
-    os.path.join(os.path.dirname(__file__), "data", "iana-domains-db.json")
+    os.path.join(os.path.dirname(__file__), "data", "iana-domains-db.json"),
+    encoding="utf-8",
 ) as fs:
     IANA_DATASETS = json.loads(fs.read())
 
 with open(
-    os.path.join(os.path.dirname(__file__), "data", "public-suffix.json")
+    os.path.join(os.path.dirname(__file__), "data", "public-suffix.json"),
+    encoding="utf-8",
 ) as fs:
     PSL_DATASETS = json.loads(fs.read())
 
 
 with open(
-    os.path.join(os.path.dirname(__file__), "data", "user_agents.json")
+    os.path.join(os.path.dirname(__file__), "data", "user_agents.json"),
+    encoding="utf-8",
 ) as fs:
     USER_AGENT_DATASETS = json.loads(fs.read())
-

@@ -67,6 +67,7 @@ try:
 except ModuleNotFoundError:  # pragma: no cover
     from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
+
 class TestIPv4SyntaxChecker(PyFuncebleTestsBase):
     """
     Tests of our IPv4 syntax checker.

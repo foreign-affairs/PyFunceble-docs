@@ -62,7 +62,6 @@ from PyFunceble.config.loader import ConfigLoader
 from PyFunceble.query.dns.query_tool import DNSQueryTool
 from PyFunceble.query.whois.query_tool import WhoisQueryTool
 
-
 try:
     from pyfunceble_tests_base import PyFuncebleTestsBase
 except ModuleNotFoundError:  # pragma: no cover

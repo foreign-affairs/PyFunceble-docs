@@ -52,7 +52,6 @@ License:
 
 import os
 import tempfile
-import unittest
 from typing import List, Optional
 
 from PyFunceble.checker.reputation.base import ReputationCheckerBase

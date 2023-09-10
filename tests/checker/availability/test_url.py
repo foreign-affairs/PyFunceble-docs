@@ -63,6 +63,7 @@ try:
 except ModuleNotFoundError:  # pragma: no cover
     from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
+
 class TestURLAvailabilityChecker(PyFuncebleTestsBase):
     """
     Tests our URL availability checker.

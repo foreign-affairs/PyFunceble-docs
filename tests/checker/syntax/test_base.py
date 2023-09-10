@@ -60,7 +60,7 @@ except ModuleNotFoundError:  # pragma: no cover
     from ...pyfunceble_tests_base import PyFuncebleTestsBase
 
 
-class TestSyntaxCheckerBase(unittest.TestCase):
+class TestSyntaxCheckerBase(PyFuncebleTestsBase):
     """
     Tests of the base of all our syntax checker.
     """
