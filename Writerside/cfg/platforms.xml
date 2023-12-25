@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<platforms>
+    <platform id="primary">
+        <src>keymap.xml</src>
+        <use-keymaps>
+            primary_Linux
+        </use-keymaps>
+    </platform>
+    <platform id="secondary">
+        <src>keymap.xml</src>
+        <use-keymaps>
+            secondary_Windows
+        </use-keymaps>
+    </platform>
+    <platform id="thirding">
+        <use-keymaps>
+            thirding_macOS
+        </use-keymaps>
+        <src>keymap.xml</src>
+    </platform>
+</platforms>

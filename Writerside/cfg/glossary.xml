@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE terms SYSTEM "https://resources.jetbrains.com/writerside/1.0/glossary.dtd">
+<terms>
+    <term name="GUI">Graphical User Interface</term>
+    <term name="tooltip">Tooltips show a definition when a user hovers over a term.</term>
+    <term name="RPZ">Response Policy Zone</term>
+    <term name="DNS">Domain Name Server</term>
+    <term name="TLD">Top level domain. This could be such as `.org` or `.net`</term>
+    <term name="WHOIS">WHOIS command is used to looking up the owner or registrant of, A domain name, The registrant of a IP address</term>
+</terms>

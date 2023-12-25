@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <shortcuts>
+        <src>keymap.xml</src>
+        <layout name="Linux" display-name="*nix"/>
+        <layout name="Windows" display-name="Windows"/>
+        <layout name="macOS" display-name="macOS"/>
+    </shortcuts>
+    <build-profile instance="p">
+        <variables>
+            <noindex-content>false</noindex-content>
+            <primary-color>ruby</primary-color>
+        </variables>
+    </build-profile>
+    <footer>
+        <copyright>@spirillen 1974-2025</copyright>
+        <social type="facebook" href="https://matrix.rocks/spirillen"/>
+        <link href="https://matrix.rocks/">matrix.rocks</link>
+        <link href="https://github.com/spirillen/PyFunceble">Testing new documentation formats</link>
+        <link href="https://github.com/spirillen/PyFunceble/wiki">the wiki version of the docs</link>
+    </footer>
+
+</buildprofiles>

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="p"
+                  name="PyFunceble" start-page="index.md">
+
+    <toc-element topic="index.md">
+    </toc-element>
+    <toc-element toc-title="use">
+        <toc-element topic="use_getting-started.md"/>
+        <toc-element topic="update.md"/>
+        <toc-element topic="known-issues.md"/>
+        <toc-element topic="installation.md"/>
+        <toc-element topic="faq.md"/>
+        <toc-element toc-title="examples">
+            <toc-element topic="availability.md"/>
+            <toc-element topic="syntax.md"/>
+        </toc-element>
+        <toc-element toc-title="configuration">
+            <toc-element topic="location.md"/>
+            <toc-element topic="configuration_index.md"/>
+            <toc-element topic="environment-variables.md"/>
+            <toc-element toc-title="parameters">
+                <toc-element topic="http-codes.md"/>
+                <toc-element topic="parameters_index.md"/>
+                <toc-element topic="parameters_SUMMARY.md"/>
+                <toc-element topic="proxy.md"/>
+                <toc-element topic="share-logs.md"/>
+                <toc-element topic="verify-ssl-certificates.md"/>
+                <toc-element topic="debug.md"/>
+                <toc-element topic="links.md"/>
+                <toc-element topic="parameters_collection.md"/>
+                <toc-element topic="dns.md"/>
+                <toc-element topic="user-agent.md"/>
+                <toc-element topic="cli-decoding.md"/>
+                <toc-element topic="lookup.md"/>
+                <toc-element topic="max-http-retries.md"/>
+                <toc-element topic="cli-testing.md"/>
+            </toc-element>
+        </toc-element>
+        <toc-element toc-title="ci-cd">
+            <toc-element topic="gitlab-ci-cd.md"/>
+            <toc-element topic="github-actions.md"/>
+            <toc-element topic="travis-ci.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element toc-title="develop">
+        <toc-element topic="getting-started.md"/>
+        <toc-element topic="checker-responses.md"/>
+        <toc-element toc-title="examples">
+            <toc-element topic="file-generation.md"/>
+            <toc-element topic="ip-syntax.md"/>
+            <toc-element topic="url-syntax.md"/>
+            <toc-element topic="domain-syntax.md"/>
+            <toc-element topic="url-availability.md"/>
+            <toc-element topic="domain-availability.md"/>
+            <toc-element topic="ip-availability.md"/>
+            <toc-element topic="domain-ip-availability.md"/>
+        </toc-element>
+        <toc-element toc-title="api-references">
+            <toc-element topic="storage_facility.md"/>
+            <toc-element topic="api-references_index.md"/>
+            <toc-element topic="facility.md"/>
+            <toc-element topic="SUMMARY.md"/>
+            <toc-element topic="sessions.md"/>
+            <toc-element topic="factory.md"/>
+            <toc-element topic="storage.md"/>
+            <toc-element topic="exceptions.md"/>
+            <toc-element topic="logger.md"/>
+            <toc-element toc-title="utils">
+                <toc-element topic="version.md"/>
+                <toc-element topic="utils_index.md"/>
+                <toc-element topic="platform.md"/>
+                <toc-element topic="profile.md"/>
+            </toc-element>
+            <toc-element toc-title="helpers">
+                <toc-element topic="download.md"/>
+                <toc-element topic="file.md"/>
+                <toc-element topic="directory.md"/>
+                <toc-element topic="hash.md"/>
+                <toc-element topic="helpers_index.md"/>
+                <toc-element topic="command.md"/>
+                <toc-element topic="merge.md"/>
+                <toc-element topic="dict.md"/>
+                <toc-element topic="regex.md"/>
+                <toc-element topic="environment_variable.md"/>
+                <toc-element topic="list.md"/>
+                <toc-element topic="helpers_exceptions.md"/>
+            </toc-element>
+            <toc-element toc-title="downloader">
+                <toc-element topic="downloader_base.md"/>
+                <toc-element topic="downloader_index.md"/>
+                <toc-element topic="user_agents.md"/>
+                <toc-element topic="downloader_ipv4_reputation.md"/>
+                <toc-element topic="downloader_public_suffix.md"/>
+                <toc-element topic="downloader_exceptions.md"/>
+                <toc-element topic="downloader_iana.md"/>
+            </toc-element>
+            <toc-element toc-title="cli">
+                <toc-element topic="cli_storage_facility.md"/>
+                <toc-element topic="credential_loader.md"/>
+                <toc-element topic="cli_index.md"/>
+                <toc-element topic="cli_facility.md"/>
+                <toc-element topic="execution_time.md"/>
+                <toc-element topic="cli_factory.md"/>
+                <toc-element topic="cli_storage.md"/>
+                <toc-element topic="file_preloader.md"/>
+                <toc-element toc-title="utils">
+                    <toc-element topic="utils_version.md"/>
+                    <toc-element topic="ascii_logo.md"/>
+                    <toc-element topic="stdout.md"/>
+                    <toc-element topic="cli_utils_index.md"/>
+                    <toc-element topic="testing.md"/>
+                    <toc-element topic="sort.md"/>
+                </toc-element>
+                <toc-element toc-title="entry_points">
+                    <toc-element topic="clean.md"/>
+                    <toc-element topic="entry_points_index.md"/>
+                    <toc-element topic="entry_points_public_suffix.md"/>
+                    <toc-element topic="production.md"/>
+                    <toc-element topic="entry_points_iana.md"/>
+                    <toc-element toc-title="pyfunceble">
+                        <toc-element topic="pyfunceble_index.md"/>
+                        <toc-element topic="argsparser.md"/>
+                        <toc-element topic="cli.md"/>
+                    </toc-element>
+                </toc-element>
+                <toc-element toc-title="system">
+                    <toc-element topic="system_base.md"/>
+                    <toc-element topic="launcher.md"/>
+                    <toc-element topic="system_index.md"/>
+                    <toc-element topic="integrator.md"/>
+                </toc-element>
+                <toc-element toc-title="processes">
+                    <toc-element topic="processes_base.md"/>
+                    <toc-element topic="chancy_tester.md"/>
+                    <toc-element topic="chancy_producer.md"/>
+                    <toc-element topic="migrator.md"/>
+                    <toc-element topic="processes_index.md"/>
+                    <toc-element topic="miner.md"/>
+                    <toc-element topic="tester.md"/>
+                    <toc-element topic="file_sorter.md"/>
+                    <toc-element topic="producer.md"/>
+                    <toc-element topic="dir_files_sorter.md"/>
+                    <toc-element toc-title="workers">
+                        <toc-element topic="workers_base.md"/>
+                        <toc-element topic="workers_chancy_tester.md"/>
+                        <toc-element topic="workers_chancy_producer.md"/>
+                        <toc-element topic="workers_migrator.md"/>
+                        <toc-element topic="workers_index.md"/>
+                        <toc-element topic="workers_miner.md"/>
+                        <toc-element topic="workers_tester.md"/>
+                        <toc-element topic="workers_file_sorter.md"/>
+                        <toc-element topic="workers_producer.md"/>
+                        <toc-element topic="file_sorter_base.md"/>
+                        <toc-element topic="workers_dir_files_sorter.md"/>
+                    </toc-element>
+                </toc-element>
+                <toc-element toc-title="continuous_integration">
+                    <toc-element topic="continuous_integration_base.md"/>
+                    <toc-element topic="gitlab_ci.md"/>
+                    <toc-element topic="continuous_integration_index.md"/>
+                    <toc-element topic="utils.md"/>
+                    <toc-element topic="jenkins.md"/>
+                    <toc-element topic="github_actions.md"/>
+                    <toc-element topic="travis_ci.md"/>
+                    <toc-element topic="continuous_integration_exceptions.md"/>
+                </toc-element>
+                <toc-element toc-title="filesystem">
+                    <toc-element topic="status_file.md"/>
+                    <toc-element topic="registrar_counter.md"/>
+                    <toc-element topic="dir_base.md"/>
+                    <toc-element topic="filesystem_index.md"/>
+                    <toc-element topic="json_base.md"/>
+                    <toc-element topic="cleanup.md"/>
+                    <toc-element topic="counter.md"/>
+                    <toc-element toc-title="dir_structure">
+                        <toc-element topic="dir_structure_base.md"/>
+                        <toc-element topic="dir_structure_index.md"/>
+                        <toc-element topic="restore.md"/>
+                        <toc-element topic="backup.md"/>
+                    </toc-element>
+                    <toc-element toc-title="printer">
+                        <toc-element topic="printer_base.md"/>
+                        <toc-element topic="printer_file.md"/>
+                        <toc-element topic="printer_stdout.md"/>
+                        <toc-element topic="printer_index.md"/>
+                    </toc-element>
+                </toc-element>
+                <toc-element toc-title="migrators">
+                    <toc-element topic="migrators_base.md"/>
+                    <toc-element topic="migrators_index.md"/>
+                    <toc-element topic="alembic.md"/>
+                    <toc-element topic="migrators_db_base.md"/>
+                    <toc-element toc-title="json2csv">
+                        <toc-element topic="json2csv_base.md"/>
+                        <toc-element topic="json2csv_index.md"/>
+                        <toc-element topic="json2csv_whois.md"/>
+                        <toc-element topic="json2csv_inactive.md"/>
+                    </toc-element>
+                    <toc-element toc-title="csv_file">
+                        <toc-element topic="csv_file_base.md"/>
+                        <toc-element topic="whois_registrar_add.md"/>
+                        <toc-element topic="csv_file_index.md"/>
+                        <toc-element topic="inactive_source_delete.md"/>
+                    </toc-element>
+                    <toc-element toc-title="mariadb">
+                        <toc-element topic="mariadb_base.md"/>
+                        <toc-element topic="file_and_status.md"/>
+                        <toc-element topic="mariadb_index.md"/>
+                        <toc-element topic="whois_record_idna_subject.md"/>
+                    </toc-element>
+                    <toc-element toc-title="file_cleanup">
+                        <toc-element topic="file_cleanup_base.md"/>
+                        <toc-element topic="production_config_file.md"/>
+                        <toc-element topic="file_cleanup_index.md"/>
+                        <toc-element topic="hashes_file.md"/>
+                        <toc-element topic="mining_file.md"/>
+                    </toc-element>
+                </toc-element>
+                <toc-element toc-title="scripts">
+                    <toc-element topic="scripts_index.md"/>
+                    <toc-element topic="scripts_public_suffix.md"/>
+                    <toc-element topic="scripts_production.md"/>
+                    <toc-element topic="scripts_iana.md"/>
+                </toc-element>
+            </toc-element>
+            <toc-element toc-title="data">
+                <toc-element topic="data_index.md"/>
+            </toc-element>
+            <toc-element toc-title="query">
+                <toc-element topic="query_index.md"/>
+                <toc-element topic="http_status_code.md"/>
+                <toc-element topic="collection.md"/>
+                <toc-element toc-title="whois">
+                    <toc-element topic="query_whois_index.md"/>
+                    <toc-element topic="whois_query_tool.md"/>
+                    <toc-element toc-title="converter">
+                        <toc-element topic="whois_converter_base.md"/>
+                        <toc-element topic="expiration_date.md"/>
+                        <toc-element topic="digit2digits.md"/>
+                        <toc-element topic="whois_converter_index.md"/>
+                        <toc-element topic="registrar.md"/>
+                        <toc-element topic="month2unified.md"/>
+                    </toc-element>
+                </toc-element>
+                <toc-element toc-title="requests">
+                    <toc-element topic="requester.md"/>
+                    <toc-element topic="requests_index.md"/>
+                    <toc-element toc-title="adapter">
+                        <toc-element topic="adapter_base.md"/>
+                        <toc-element topic="https.md"/>
+                        <toc-element topic="adapter_index.md"/>
+                        <toc-element topic="http.md"/>
+                    </toc-element>
+                </toc-element>
+                <toc-element toc-title="record">
+                    <toc-element topic="record_base.md"/>
+                    <toc-element topic="record_index.md"/>
+                    <toc-element topic="record_whois.md"/>
+                    <toc-element topic="record_dns.md"/>
+                </toc-element>
+                <toc-element toc-title="dns">
+                    <toc-element topic="dns_index.md"/>
+                    <toc-element topic="nameserver.md"/>
+                    <toc-element topic="query_tool.md"/>
+                    <toc-element topic="resolver.md"/>
+                </toc-element>
+                <toc-element toc-title="netinfo">
+                    <toc-element topic="netinfo_base.md"/>
+                    <toc-element topic="netinfo_index.md"/>
+                    <toc-element topic="hostbyaddr.md"/>
+                    <toc-element topic="address.md"/>
+                </toc-element>
+            </toc-element>
+            <toc-element toc-title="converter">
+                <toc-element topic="converter_base.md"/>
+                <toc-element topic="adblock_input_line2subject.md"/>
+                <toc-element topic="converter_index.md"/>
+                <toc-element topic="wildcard2subject.md"/>
+                <toc-element topic="subject2complements.md"/>
+                <toc-element topic="input_line2subject.md"/>
+                <toc-element topic="rpz_policy2subject.md"/>
+                <toc-element topic="cidr2subject.md"/>
+                <toc-element topic="internal_url.md"/>
+                <toc-element topic="url2netloc.md"/>
+                <toc-element topic="rpz_input_line2subject.md"/>
+            </toc-element>
+            <toc-element toc-title="database">
+                <toc-element topic="database_index.md"/>
+                <toc-element topic="session.md"/>
+                <toc-element toc-title="schemas">
+                    <toc-element topic="schemas_status.md"/>
+                    <toc-element topic="whois_record.md"/>
+                    <toc-element topic="schemas_index.md"/>
+                    <toc-element topic="inactive.md"/>
+                    <toc-element topic="autocontinue.md"/>
+                </toc-element>
+                <toc-element toc-title="credential">
+                    <toc-element topic="credential_base.md"/>
+                    <toc-element topic="credential_index.md"/>
+                    <toc-element topic="mysql.md"/>
+                    <toc-element topic="mariadb.md"/>
+                    <toc-element topic="postgresql.md"/>
+                </toc-element>
+                <toc-element toc-title="sqlalchemy">
+                    <toc-element topic="sqlalchemy_index.md"/>
+                    <toc-element topic="base_schema.md"/>
+                    <toc-element topic="all_schemas.md"/>
+                </toc-element>
+            </toc-element>
+            <toc-element toc-title="config">
+                <toc-element topic="compare.md"/>
+                <toc-element topic="loader.md"/>
+                <toc-element topic="config_index.md"/>
+            </toc-element>
+            <toc-element toc-title="dataset">
+                <toc-element topic="dataset_base.md"/>
+                <toc-element topic="user_agent.md"/>
+                <toc-element topic="sql_base.md"/>
+                <toc-element topic="dataset_index.md"/>
+                <toc-element topic="ipv4_reputation.md"/>
+                <toc-element topic="csv_base.md"/>
+                <toc-element topic="public_suffix.md"/>
+                <toc-element topic="db_base.md"/>
+                <toc-element topic="iana.md"/>
+                <toc-element toc-title="whois">
+                    <toc-element topic="whois_base.md"/>
+                    <toc-element topic="whois_sql.md"/>
+                    <toc-element topic="whois_index.md"/>
+                    <toc-element topic="whois_csv.md"/>
+                </toc-element>
+                <toc-element toc-title="inactive">
+                    <toc-element topic="inactive_base.md"/>
+                    <toc-element topic="inactive_sql.md"/>
+                    <toc-element topic="inactive_index.md"/>
+                    <toc-element topic="inactive_csv.md"/>
+                </toc-element>
+                <toc-element toc-title="autocontinue">
+                    <toc-element topic="autocontinue_base.md"/>
+                    <toc-element topic="sql.md"/>
+                    <toc-element topic="autocontinue_index.md"/>
+                    <toc-element topic="csv.md"/>
+                </toc-element>
+            </toc-element>
+            <toc-element toc-title="checker">
+                <toc-element topic="base.md"/>
+                <toc-element topic="checker_index.md"/>
+                <toc-element topic="status_base.md"/>
+                <toc-element topic="complex_json_encoder.md"/>
+                <toc-element topic="params_base.md"/>
+                <toc-element toc-title="utils">
+                    <toc-element topic="checker_utils_index.md"/>
+                    <toc-element topic="whois.md"/>
+                </toc-element>
+                <toc-element toc-title="reputation">
+                    <toc-element topic="reputation_base.md"/>
+                    <toc-element topic="reputation_status.md"/>
+                    <toc-element topic="reputation_domain.md"/>
+                    <toc-element topic="reputation_index.md"/>
+                    <toc-element topic="reputation_ip.md"/>
+                    <toc-element topic="reputation_url.md"/>
+                    <toc-element topic="reputation_domain_and_ip.md"/>
+                    <toc-element topic="reputation_params.md"/>
+                </toc-element>
+                <toc-element toc-title="syntax">
+                    <toc-element topic="syntax_base.md"/>
+                    <toc-element topic="syntax_status.md"/>
+                    <toc-element topic="ipv4.md"/>
+                    <toc-element topic="syntax_domain.md"/>
+                    <toc-element topic="domain_base.md"/>
+                    <toc-element topic="syntax_index.md"/>
+                    <toc-element topic="syntax_ip.md"/>
+                    <toc-element topic="syntax_url.md"/>
+                    <toc-element topic="syntax_domain_and_ip.md"/>
+                    <toc-element topic="subdomain.md"/>
+                    <toc-element topic="second_lvl_domain.md"/>
+                    <toc-element topic="ipv6.md"/>
+                    <toc-element topic="syntax_params.md"/>
+                </toc-element>
+                <toc-element toc-title="availability">
+                    <toc-element topic="availability_base.md"/>
+                    <toc-element topic="status.md"/>
+                    <toc-element topic="domain.md"/>
+                    <toc-element topic="availability_index.md"/>
+                    <toc-element topic="ip.md"/>
+                    <toc-element topic="url.md"/>
+                    <toc-element topic="domain_and_ip.md"/>
+                    <toc-element topic="params.md"/>
+                    <toc-element toc-title="extras">
+                        <toc-element topic="extras_base.md"/>
+                        <toc-element topic="rules.md"/>
+                        <toc-element topic="extras_index.md"/>
+                        <toc-element topic="etoxic.md"/>
+                        <toc-element topic="parked.md"/>
+                        <toc-element topic="extras_dns.md"/>
+                        <toc-element topic="subject_switch.md"/>
+                    </toc-element>
+                </toc-element>
+            </toc-element>
+        </toc-element>
+    </toc-element>
+    <toc-element toc-title="contributing">
+        <toc-element topic="code-of-conduct.md"/>
+        <toc-element topic="contributing.md"/>
+    </toc-element>
+    <toc-element toc-title="about">
+        <toc-element topic="contributors.md"/>
+        <toc-element topic="history.md"/>
+        <toc-element topic="special-thanks.md"/>
+        <toc-element topic="license.md"/>
+    </toc-element>
+    <toc-element topic="help.md"/>
+    <toc-element topic="support.md"/>
+</instance-profile>

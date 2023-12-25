@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keymap id="km">
+    <Action id="GotoFile">
+        <Description>Go to File...</Description>
+        <Shortcut layout="primary_Linux">Ctrl+Shift+N</Shortcut>
+        <Shortcut layout="secondary_Windows">Ctrl+Shift+N</Shortcut>
+        <Shortcut layout="thirding_macOS">⇧ ⌘ O</Shortcut>
+    </Action>
+    <Action id="ShowIntentionActions">
+        <Description>Show Context Actions</Description>
+        <Shortcut layout="primary_Linux">Ctrl+Shift+N</Shortcut>
+        <Shortcut layout="secondary_Windows">Alt+Enter</Shortcut>
+        <Shortcut layout="thirding_macOS">⌥ ⏎</Shortcut>
+    </Action>
+    <Action id="Generate">
+        <Description>Generate...</Description>
+        <Shortcut layout="primary_Linux">Ctrl+Shift+N</Shortcut>
+        <Shortcut layout="secondary_Windows">Alt+Insert</Shortcut>
+        <Shortcut layout="thirding_macOS">⌘ N</Shortcut>
+    </Action>
+    <Action id="EditorTab">
+        <Description>Tab</Description>
+        <Shortcut layout="primary_Linux">Ctrl+Shift+N</Shortcut>
+        <Shortcut layout="secondary_Windows">Tab</Shortcut>
+        <Shortcut layout="thirding_macOS">⇥</Shortcut>
+    </Action>
+    <Action id="CtrlCmd">
+        <Shortcut layout="primary_Linux">Ctrl+Shift+N</Shortcut>
+        <Shortcut layout="secondary_Windows">Ctrl</Shortcut>
+        <Shortcut layout="thirding_macOS">⌘</Shortcut>
+    </Action>
+    <Action id="RenameElement">
+        <Description>Rename...</Description>
+        <Shortcut layout="primary_Linux">Ctrl+Shift+N</Shortcut>
+        <Shortcut layout="secondary_Windows">Shift+F6</Shortcut>
+        <Shortcut layout="thirding_macOS">⇧ F6</Shortcut>
+    </Action>
+
+</Keymap>
