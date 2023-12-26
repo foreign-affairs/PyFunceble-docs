@@ -108,15 +108,6 @@ the absolute path of the PyFunceble executable.
 
 ## CI / CD Engines
 
-### Travis CI
-
-While using PyFunceble under the Travis CI engine, no coloration will be displayed.
-
-### GitLab CI/CD
-
-While using PyFunceble under the GitLab CI/CD engine, no coloration will be displayed.
-
-### GitHub Workflows
-
-While using PyFunceble under the GitHub Workflows/Actions engine, no coloration will be displayed.
-
+A general limitation when running on a CI|CD instance, whether it is
+<code>Travis CI</code> or <code>GitLab CI/CD</code>, <code>GitHub
+Workflows</code> no colouration will be displayed.

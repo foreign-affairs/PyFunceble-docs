@@ -10,7 +10,7 @@ Thanks to those awesome organization(s), tool(s) and or people(s) for
 - Their current work/purpose
 - Their promotion of Py-Funceble
 - Their support
-- Their testings reports
+- Their testing reports
 
 which helped and/or still help me build, test and or make
 [PyFunceble](https://github.com/funilrys/PyFunceble) a better tool.
@@ -25,7 +25,8 @@ which helped and/or still help me build, test and or make
 - Daniel - [@dnmTX](https://github.com/dnmTX)
 - Jonathan Hartley - [@tartley](https://github.com/tartley)
   ([colorama](https://github.com/tartley/colorama))
-- [IANA](https://www.iana.org/) - [ICANN](https://www.icann.org/)
+- [IANA](https://www.iana.org/)
+- [ICANN](https://www.icann.org/)
   ([Root Zone Database](https://www.iana.org/domains/root/db))
 - [Iterative](https://github.com/iterative)
   ([shtab](https://github.com/iterative/shtab))

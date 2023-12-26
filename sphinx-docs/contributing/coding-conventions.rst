@@ -13,8 +13,8 @@ Format
     $ black PyFunceble && black tests
 
 .. note::
-    You can avoid this secion if you use the :code:`production-pyfunceble` CLI
-    which already handles as musch as possible.
+    You can avoid this section if you use the :code:`production-pyfunceble` CLI
+    which already handles as much as possible.
 
 Linting
 ^^^^^^^
@@ -31,7 +31,7 @@ Coverage
 Our code should have at least 60% of coverage.
 
 .. note::
-    Coverage unrelevant code/files can be muted.
+    Coverage irrelevant code/files can be muted.
 
 ::
 
@@ -46,7 +46,7 @@ That file should **ALWAYS** be generated with the following.
 
 .. note::
     An exception is granted for detached branch
-    (not :code:`dev` nor :code:`master`) and no code changes.
+    (not :code:`dev` or :code:`master`) and no code changes.
 
 ::
 
