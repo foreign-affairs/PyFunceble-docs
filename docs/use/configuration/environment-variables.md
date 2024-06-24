@@ -8,20 +8,20 @@ In this page you will find all environment variables grouped by "features".
 ## Configuration Management
 
 | Environment Variable          | Description                                                                          |
-| ----------------------------- | ------------------------------------------------------------------------------------ |
+|-------------------------------|--------------------------------------------------------------------------------------|
 | PYFUNCEBLE_CONFIG_DIR         | If set, PyFunceble will assume its value as the location of the configuration files. |
 | PYFUNCEBLE_AUTO_CONFIGURATION | If defined with any value, PyFunceble will accept upstream configuration changes.    |
 
 ## Output Management
 
 | Environment Variable       | Description                                                                          |
-| -------------------------- | ------------------------------------------------------------------------------------ |
+|----------------------------|--------------------------------------------------------------------------------------|
 | PYFUNCEBLE_OUTPUT_LOCATION | Defines the folder where PyFunceble will generate the `output/` folder and datasets. |
 
 ## Git / CI Management
 
 | Environment Variable     | Description                                                                                                                                                                                      |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GIT_NAME                 | Defines the `git.name` to setup and use.                                                                                                                                                         |
 | GIT_EMAIL                | Defines the `git.email` to setup and use.                                                                                                                                                        |
 | GIT_BRANCH               | Defines the branch to use to store results between multiple CI/CD sessions. **WARNING:** This doesn't apply to the final results                                                                 |
@@ -33,11 +33,11 @@ In this page you will find all environment variables grouped by "features".
 
 ## Database Management
 
-The environment variables listed below are used to share your database credentials
-with PyFunceble.
+The environment variables listed below are used to share your database
+credentials with PyFunceble.
 
 | Environment Variable   | Description                                                                                        |
-| ---------------------- | -------------------------------------------------------------------------------------------------- |
+|------------------------|----------------------------------------------------------------------------------------------------|
 | PYFUNCEBLE_DB_CHARSET  | The charset PyFunceble has to use while writing into the database.                                 |
 | PYFUNCEBLE_DB_HOST     | The location of the database. It can be an IP, hostname or an absolute path of a unix socket file. |
 | PYFUNCEBLE_DB_PORT     | When `PYFUNCEBLE_DB_HOST` is not a socket file, the port to reach the database through             |
@@ -47,7 +47,8 @@ with PyFunceble.
 
 ## Debugging
 
-The environment variables listed below can be used to control the extended outputs of PyFunceble.
+The environment variables listed below can be used to control the extended
+outputs of PyFunceble.
 
 !!! danger "Beware!!!"
 
@@ -57,7 +58,7 @@ The environment variables listed below can be used to control the extended outpu
     **Never share the debug output unsecurely.**
 
 | Environment Variable       | Description                                                                                 |
-| -------------------------- | ------------------------------------------------------------------------------------------- |
+|----------------------------|---------------------------------------------------------------------------------------------|
 | PYFUNCEBLE_DEBUG           | Activates the debug mode.                                                                   |
 | PYFUNCEBLE_DEBUG_LVL       | The logging level. Can be any of `NONE`, `INFO`, `WARNING`, `ERROR`, `CRITICAL` or `DEBUG`. |
 | PYFUNCEBLE_LOGGING_LVL     | Alias of `PYFUNCEBLE_DEBUG_LVL`.                                                            |
@@ -65,11 +66,11 @@ The environment variables listed below can be used to control the extended outpu
 
 ## Internal Environment Variables
 
-The environment variables shouldn't be set by yourself, but PyFunceble somehow still
-read and use them. #MayTheForceBeWithYou :star:
+The environment variables shouldn't be set by yourself, but PyFunceble somehow
+still read and use them. #MayTheForceBeWithYou :star:
 
 | Environment Variable     | Description                                                                                             |
-| ------------------------ | ------------------------------------------------------------------------------------------------------- |
+|--------------------------|---------------------------------------------------------------------------------------------------------|
 | APPDATA                  | Used under Windows to build or get the configuration folder, when `PYFUNCEBLE_CONFIG_DIR` is not found. |
 | GITHUB_ACTIONS           | Used to detect whether we are running under a GitHub Action worker                                      |
 | GITLAB_CI                | Used to detect whether we are running under a GitLab CI/CD runner.                                      |
@@ -80,14 +81,16 @@ read and use them. #MayTheForceBeWithYou :star:
 | PYFUNCEBLE_STANDALONE_CI | Used to detect whether we are running under a Standalone CI/CD engine.                                  |
 
 ## Beta Features
+
 !!! danger "Beware!!!"
 
     This section is documented, but most of the features below them are not open to everyone - yet.
 
-The environment variables listed below, are strictely reserved to selected or power users.
+The environment variables listed below, are strictely reserved to selected or
+power users.
 
 | Environment Variable                 | Description                                                           |
-| ------------------------------------ | --------------------------------------------------------------------- |
+|--------------------------------------|-----------------------------------------------------------------------|
 | PYFUNCEBLE_PLATFORM_API_TOKEN        | Set the API token to use when pushing data into the platform API.     |
 | PYFUNCEBLE_PLATFORM_CHECKER_PRIORITY | Set the prioritized checker to accept while testing for the platform. |
 | PYFUNCEBLE_PLATFORM_CHECKER_EXCLUDE  | Set the checker to exclude while testing for the platform.            |

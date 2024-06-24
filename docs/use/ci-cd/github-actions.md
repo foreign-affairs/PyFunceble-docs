@@ -1,12 +1,13 @@
 # Github Action
 
 PyFunceble can be used within a GitHub Action container.
-The idea is to run PyFunceble within a GitHub Action container and let PyFunceble push the result into a Git Repository.
+The idea is to run PyFunceble within a GitHub Action container and let
+PyFunceble push the result into a Git Repository.
 
 ## Environment Variables
 
 | Environment Variable          | Description                                                                                                                                                                                                    |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GITHUB_ACTIONS                | The variable PyFunceble will look for to decide which CI "engine" to use. **BEWARE:** If you use this variable to test locally, your configurations may get messy. Please test within an isolated environment. |
 | PYFUNCEBLE_AUTO_CONFIGURATION | Let PyFunceble manage the configuration files.                                                                                                                                                                 |
 | PYFUNCEBLE_CONFIG_DIR         | Let PyFunceble know where it should store its configuration files.                                                                                                                                             |
@@ -18,7 +19,8 @@ The idea is to run PyFunceble within a GitHub Action container and let PyFuncebl
 
 ## Example
 
-Here is an example that demonstrate how to use PyFunceble within a GitHub Workflow.
+Here is an example that demonstrate how to use PyFunceble within a GitHub
+Workflow.
 
 ```yaml title=".github/workflows/main.yml"
 name: PyFunceble CI tests

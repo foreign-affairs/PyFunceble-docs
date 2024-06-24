@@ -28,7 +28,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
-# TOOD: Switch to main branch.
+# TODO: Switch to dev branch.
 edit_uri: edit/switch-to-mkdocs/docs/
 
 extra:

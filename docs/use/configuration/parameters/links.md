@@ -1,6 +1,7 @@
 # `links`
 
-While PyFunceble has some hard coded URLs, some URL may be changed. The parameters listed below let you control some of the URLs.
+While PyFunceble has some hard coded URLs, some URL may be changed. The
+parameters listed below let you control some of the URLs.
 
 !!! danger "Beware!!!!"
 
@@ -19,4 +20,3 @@ links:
   api_date_format: "https://pyfunceble.funilrys.com/api/date-format"
   api_no_referrer: "https://pyfunceble.funilrys.com/api/no-referrer"
 ```
-

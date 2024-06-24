@@ -1,7 +1,7 @@
 # `user_agent`
 
-PyFunceble can choose a random user-agent to send when making HTTP requests. This
-is how to parametrize.
+PyFunceble can choose a random user-agent to send when making HTTP requests.
+This is how to parametrize.
 
 ## Overview
 
@@ -59,7 +59,6 @@ Set the platform to pickup.
 ## `custom`
 
 Set the User-Agent to use.
-
 
 **Type:** string
 

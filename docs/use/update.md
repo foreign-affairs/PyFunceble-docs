@@ -5,7 +5,7 @@ Updating PyFunceble is as easy as the installation.
 ## Overview: Update Method
 
 | OS        | Technology                  | Tools        | Link                                 |
-| --------- | --------------------------- | ------------ | ------------------------------------ |
+|-----------|-----------------------------|--------------|--------------------------------------|
 | Any       | PyPi - Python Package Index | `pip3`       | [Link](#pypi---python-package-index) |
 | Any       | Container Image Registry    | `docker`     | [Link](#container-image-registry)    |
 | Any       | Git                         | `pip3`       | [Link](#git-repository)              |
@@ -14,8 +14,8 @@ Updating PyFunceble is as easy as the installation.
 
 ## PyPi - Python Package Index
 
-Updating a `pip` installed package is straight forward. Just append `--upgrade` to
-you installation command and you are good to go.
+Updating a `pip` installed package is straight forward. Just append `--upgrade`
+to you installation command and you are good to go.
 
 Here is an overview of the packages and where they are hosted.
 
@@ -62,9 +62,9 @@ pip3 install --user --pre --upgrade pyfunceble-dev
 
 ## Container Image Registry
 
-Updating from a Container Image Registry is easier. If you allowed your container
-engine to automatically pull the `latest` tag, you have nothing to do. The new
-layers are downloaded before you run PyFunceble.
+Updating from a Container Image Registry is easier. If you allowed your
+container engine to automatically pull the `latest` tag, you have nothing
+to do. The new layers are downloaded before you run PyFunceble.
 
 Here is an overview of the packages and where they are hosted.
 
@@ -72,7 +72,6 @@ Here is an overview of the packages and where they are hosted.
 |------------|----------------|----------------------------------------------------------------------------------------------------------|
 | Docker Hub | pyfunceble     | [https://hub.docker.com/r/pyfunceble/pyfunceble](https://hub.docker.com/r/pyfunceble/pyfunceble)         |
 | Docker Hub | pyfunceble-dev | [https://hub.docker.com/r/pyfunceble/pyfunceble-dev](https://hub.docker.com/r/pyfunceble/pyfunceble-dev) |
-
 
 ## Arch Linux
 
@@ -127,9 +126,9 @@ makepkg -fsri
 
 ## Git Repository
 
-Updating from the Git Repository with `pip3` is just like a normal update of `pip`
-installed package. Just add `--upgrade` to your installation command and you are good
-to go.
+Updating from the Git Repository with `pip3` is just like a normal update
+of `pip` installed package. Just add `--upgrade` to your installation
+command and you are good to go.
 
 Here is an overview of the packages and where they are hosted.
 
@@ -192,13 +191,13 @@ pip3 install --user --upgrade git+https://gitlab.com/funilrys/PyFunceble.git@dev
 ## From Source
 
 Updating from the source with `pip3` is just like a normal update of `pip`
-installed package. Just add `--upgrade` to your installation command and you are good
-to go.
+installed package. Just add `--upgrade` to your installation command and
+you are good to go.
 
 Here is an overview of the packages and where they are hosted.
 
 | Host   | Package        | Branch   | Repository                                                                                               |
-| ------ | -------------- | -------- | -------------------------------------------------------------------------------------------------------- |
+|--------|----------------|----------|----------------------------------------------------------------------------------------------------------|
 | GitHub | pyfunceble     | `master` | [https://github.com/funilrys/PyFunceble/tree/master](https://github.com/funilrys/PyFunceble/tree/master) |
 | GitHub | pyfunceble-dev | `dev`    | [https://github.com/funilrys/PyFunceble/tree/dev](https://github.com/funilrys/PyFunceble/tree/dev)       |
 | GitLab | pyfunceble     | `master` | [https://gitlab.com/funilrys/PyFunceble/tree/master](https://gitlab.com/funilrys/PyFunceble/tree/master) |

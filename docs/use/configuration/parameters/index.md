@@ -1,7 +1,7 @@
 # Parameters
 
-As you now know, PyFunceble can be configured through the CLI, or its configuration
-file.
+As you now know, PyFunceble can be configured through the CLI, or its
+configuration file.
 
 ## CLI Arguments: Behavior while switching boolean parameters
 
@@ -29,4 +29,3 @@ pyfunceble  --verify-ssl-certificate -d example.org
 
 PyFunceble will starts with the `verify_ssl_certificates` set to `no` - and
 vice-versa.
-

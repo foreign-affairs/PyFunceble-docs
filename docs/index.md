@@ -35,7 +35,8 @@
     </a>
 </p>
 
-**PyFunceble** is a tools that aims to provide an accurate availability check through
+**PyFunceble** is a tools that aims to provide an accurate availability check
+through
 the usage of multiple sources which are for example - to only list a few:
 
 - the WHOIS record(s).
@@ -46,7 +47,9 @@ the usage of multiple sources which are for example - to only list a few:
 PyFunceble can be included in your existing project through:
 
 - its standard built-in CLI implementation.
-# TODO: Re-enable the link to the API
+
+[//]: # (TODO: Re-enable the link to the API)
+
 - its `[Python
   API](./develop/api-references/index.md)`.
 - the [PyFunceble

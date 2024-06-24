@@ -1,6 +1,7 @@
 # `cli_testing`
 
-This is where you can configure everything related to the testing through the CLI.
+This is where you can configure everything related to the testing through the
+CLI.
 
 ## Overview
 
@@ -81,12 +82,14 @@ cli_testing:
   # Set the type of database to use or generate to store long term information-s.
   #
   # When set to `mariadb`, `mysql` or `postgesql` the following environment
-  # variables are required.
+  # variables are required and can be set in $HOME/.config/.pyfunceble-env.
   #
   #     PYFUNCEBLE_DB_HOST - The host or unix socket path of the database server.
   #     PYFUNCEBLE_DB_PORT - The port to use to reach the database server.
-  #     PYFUNCEBLE_DB_USERNAME - The username to use to connect to the database server - when applicable.
-  #     PYFUNCEBLE_DB_PASSWORD - The password to use to connect to the database server - when applicable.
+  #     PYFUNCEBLE_DB_USERNAME - The username to use to connect to the database
+  #                              server - when applicable.
+  #     PYFUNCEBLE_DB_PASSWORD - The password to use to connect to the database
+  #                              server - when applicable.
   #     PYFUNCEBLE_DB_NAME - The name of the database to work with.
   #     PYFUNCEBLE_DB_CHARSET - The charset to use - when applicable.
   #

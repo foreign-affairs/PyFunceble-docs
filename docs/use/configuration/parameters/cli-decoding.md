@@ -57,7 +57,8 @@ cli_decoding:
 ## `aggressive`
 
 Enable or disable the aggressive mode. The aggressive mode is a mode that tries
-to decode as much as possible without trying to follow any technical conventions.
+to decode as much as possible without trying to follow any technical
+conventions.
 
 When using this parameter while decoding AdBlock filter lists, it will try to
 decode almost every domains it finds.
@@ -81,8 +82,8 @@ Enable or disable the (exclusive) decoding of AdBlock filter lists.
 !!! danger "Beware!!!!"
 
     If you choose to activate this parameter in your configuration file,
-    PyFunceble will assume that any inputed files are AdBlock filter lists to
-    decode.
+    PyFunceble will assume that any inputed files are AdBlock filter lists
+    to decode.
 
 **Type:** boolean
 

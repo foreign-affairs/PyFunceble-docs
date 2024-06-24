@@ -106,6 +106,9 @@ venv.bak/
 # VSCode (Visual Basic Code)
 .vscode
 
+#.idea (Jetbrains, IntelliJ)
+.idea
+
 # Project related
 .pyfunceble_intern_downtime.json
 .pyfunceble-env

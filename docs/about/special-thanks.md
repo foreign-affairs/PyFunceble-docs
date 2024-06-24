@@ -5,15 +5,16 @@ Thanks to those awesome organization(s), tool(s) and or people(s) for
 - Their awesome documentation
 - Their awesome repository
 - Their awesome tool/software/source code
-- Their breaking reports
+- Their bug reports
 - Their contributions
 - Their current work/purpose
 - Their promotion of Py-Funceble
 - Their support
-- Their testings reports
+- Their testing reports
 
-which helped and/or still help me build, test and or make
-[PyFunceble](https://github.com/funilrys/PyFunceble) a better tool.
+It has been a big help and/or still helping me build, test and make
+[PyFunceble][PyF] a better tool. Without them, PyFunceble have never been,
+what it is today.
 
 - Adam Warner - [@PromoFaux](https://github.com/PromoFaux)
 - Adblock Plus - [@adblockplus](https://github.com/adblockplus)
@@ -47,3 +48,5 @@ which helped and/or still help me build, test and or make
   ([pyyaml](https://github.com/yaml/pyyaml))
 - [yWorks](https://www.yworks.com/company) - ([yEd Graph
   Editor](https://www.yworks.com/products/yed))
+
+[PyF]: https://github.com/funilrys/PyFunceble "PyFunceble The tool for avalebilty testing"

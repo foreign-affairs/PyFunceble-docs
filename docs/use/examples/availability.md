@@ -76,12 +76,14 @@ pyfunceble -uf ./source.url.list
 pyfunceble -uf https://example.org/my/awesome/file
 ```
 
-Just like the `-f` argument, when using the `-uf` argument, the inputted source can be:
+Just like the `-f` argument, when using the `-uf` argument, the inputted
+source can be:
 
 - any file-s on your filesystem accessible by the user running PyFunceble.
 - an HTTP (raw) URL-s of the file you want PyFunceble to download and check.
 
-When testing the availability of URLs, PyFunceble following the following formats:
+When testing the availability of URLs, PyFunceble following the following
+formats:
 
 - plain text file
 

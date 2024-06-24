@@ -20,7 +20,8 @@ lookup:
   # Exclusive CLI Argument: --http-only | --http-status-code-lookup
   http_status_code: yes
 
-  # Enable/Disable the usage of network (information) socket to lookup the status.
+  # Enable/Disable the usage of network (information) socket to lookup
+  # the status.
   #
   # CLI Argument: --netinfo-lookup
   # Exclusive CLI Argument: --netinfo-lookup-only
@@ -93,7 +94,8 @@ Enable or disable the usage of HTTP status codes to lookup the status.
 
 ## `netinfo`
 
-Enable or disable the usage of network (information) socket to lookup the status.
+Enable or disable the usage of network (information) socket to lookup the
+status.
 
 **Type:** boolean
 

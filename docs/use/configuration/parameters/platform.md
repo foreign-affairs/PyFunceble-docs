@@ -133,20 +133,21 @@ it returns 3 group of results:
 
 ## `checker_priority`
 
-Defines the checker type to prioritize when trying to fullfil platform contracts.
+Defines the checker type to prioritize when trying to fullfil platform
+contracts.
 
 !!! note "Notes:"
 
     1. This is a list. The order matters.
     2. One can overwrite this value, by settings a comma separated list of
-       checker type to prioritize through the PYFUNCEBLE_PLATFORM_CHECKER_PRIORITY
-       environment variable.
+       checker type to prioritize through the
+       PYFUNCEBLE_PLATFORM_CHECKER_PRIORITY environment variable.
     3. When set to `none`, the platform will throw a random contract at us.
 
 **Example:**
-  Prioritize availability checker until no contract is available, then
-  prioritize syntax checker until no contract is available, then prioritize
-  reputation checker until no contract is available.
+Prioritize availability checker until no contract is available, then
+prioritize syntax checker until no contract is available, then prioritize
+reputation checker until no contract is available.
 
   ```yaml
   checker_priority:
@@ -182,7 +183,7 @@ Defines the checker type to exclude when trying to fullfil platform contracts.
 
 **Example:**
 
-  Exclude the reputation checker from the list of checker to use to fullfil.
+Exclude the reputation checker from the list of checker to use to fullfil.
 
   ```yaml
   checker_exclude:
@@ -201,4 +202,3 @@ Defines the checker type to exclude when trying to fullfil platform contracts.
 **Available Values:** `none`, `availability`, `reputation`, `syntax`
 
 **CLI Argument:** none
-

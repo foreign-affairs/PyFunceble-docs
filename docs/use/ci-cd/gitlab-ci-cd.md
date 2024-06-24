@@ -1,12 +1,13 @@
 # GitLab CI/CD
 
 PyFunceble can be used within a GitLab CI/CD runner.
-The idea is to run PyFunceble within a runner and let PyFunceble push the result into a Git Repository.
+The idea is to run PyFunceble within a runner and let PyFunceble push the result
+into a Git Repository.
 
 ## Environment Variables
 
 | Environment Variable          | Description                                                                                                                                                                                                     |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GITLAB_CI / GITLAB_USER_ID    | The variables PyFunceble will look for to decide which CI "engine" to use. **BEWARE:** If you use this variable to test locally, your configurations may get messy. Please test within an isolated environment. |
 | PYFUNCEBLE_AUTO_CONFIGURATION | Let PyFunceble manage the configuration files.                                                                                                                                                                  |
 | PYFUNCEBLE_CONFIG_DIR         | Let PyFunceble know where it should store its configuration files.                                                                                                                                              |
@@ -18,15 +19,21 @@ The idea is to run PyFunceble within a runner and let PyFunceble push the result
 
 ## Configuration: Personal Access Token
 
-A personal access token is needed in order for PyFunceble to automatically push the results.
+A personal access token is needed in order for PyFunceble to automatically push
+the results.
 
-You should get [a personal GitLab access token](https://gitlab.com/profile/personal_access_tokens) with the `read_repository` and `write_repository` scopes.
+You should
+get [a personal GitLab access token](https://gitlab.com/profile/personal_access_tokens)
+with the `read_repository` and `write_repository` scopes.
 
-Once created and copied in a safe place, create a new masked variable called `GL_TOKEN` inside the CI/CD settings of your project. The value of the variable should be the newly generated personal access token.
+Once created and copied in a safe place, create a new masked variable
+called `GL_TOKEN` inside the CI/CD settings of your project. The value of the
+variable should be the newly generated personal access token.
 
 ## Example
 
-Here is an example that demonstrate how to use PyFunceble within a GitLab CI/CD Runner.
+Here is an example that demonstrate how to use PyFunceble within a GitLab CI/CD
+Runner.
 
 !!! warning
 
