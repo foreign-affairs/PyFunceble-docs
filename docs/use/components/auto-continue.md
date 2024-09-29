@@ -13,7 +13,7 @@ under a Travis CI container to continue *when* the PyFunceble crashes.
 
 ## How does it work?
 
-!! "note"
+!!! note ""
 
     Want to read the code ? It's here:
     :meth:`~PyFunceble.dataset.autocontinue.base.ContinueDatasetBase`!
@@ -25,14 +25,17 @@ when we are done with the test of the given file.
 
 It is activated by default but you can simply change
 
-    cli_testing:
-        autocontinue: False
+```yaml
+  cli_testing:
+    autocontinue: False
+```
 
 to
 
-    cli_testing:
-        autocontinue: True
+```yaml
+  cli_testing:
+    autocontinue: True
+```
 
-
-into your personal :code:`.PyFunceble.yaml` or use the :code:`--continue`
+into your personal `.PyFunceble.overwrite,yaml` or use the :code:`--continue`
 argument from the CLI to reactivate it.

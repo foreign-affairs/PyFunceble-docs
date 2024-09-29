@@ -109,6 +109,43 @@ nav:
           - Location: use/configuration/location.md
           - Environment Variables: use/configuration/environment-variables.md
           - Parameters: use/configuration/parameters/
+      - Component:
+          - use/components/index.md
+          - config: use/components/config.md
+          - Adblocker: use/components/adblock.md
+          - Auto continue: use/components/auto-continue.md
+          - Certificate verification: use/components/certificate-verification.md
+          - Cleaning: use/components/
+          - Complements Generation: use/components/complements.md
+          - Clean: use/components/clean.md
+          - Continuous integration: use/components/continuous-integration.md
+          - DNS:
+              - dns-lookup: use/components/dns-lookup.md
+              - custom-dns-protocol: use/components/custom-dns-protocol.md
+              - custom-dns-server: use/components/custom-dns-server.md
+          - Custom user agent: use/components/custom-user-agent.md
+          - Database: use/components/databases.md
+          - Directory structure: use/components/directory-structure.md
+          - Environment variables: use/components/environment-variables.md
+          - Execution time: use/components/execution-time.md
+          - Expiration date: use/components/expiration-date.md
+          - Filter: use/components/filter.md
+          - HTTP status code: use/components/http-status-code.md
+          - Iana: use/components/iana.md
+          - Local: use/components/local.md
+          - Log Sharing: use/components/logs-sharing.md
+          - Mining: use/components/mining.md
+          - Multiprocessing: use/components/multiprocessing.md
+          - Output Directives:
+              - use/components/output-files.md
+              - Sorting: use/components/sorting.md
+              - Status: use/components/status.md
+              - Status Source: use/components/status-source.md
+          - Percentage: use/components/percentage.md
+          - Proxy Setting: use/components/proxy-settings.md
+          - public-suffix: use/components/public-suffix.md
+          - special Rules: use/components/special-rules.md
+          - Whois: use/components/whois-lookup.md
       - CI/CD:
           - GitHub Actions: use/ci-cd/github-actions.md
           - GitLab CI/CD: use/ci-cd/gitlab-ci-cd.md

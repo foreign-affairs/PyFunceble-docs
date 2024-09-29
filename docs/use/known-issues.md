@@ -105,7 +105,7 @@ If however you intend to run PyFunceble through Cygwin, you have to manually
 define the `PATH` (as Cygwin won't follow the system-wide settings) or use
 the absolute path of the PyFunceble executable.
 
-!!! note ""
+!!! note "note"
 
     Since this issue is not directly related to PyFunceble, you may document
     yourself throught the [issue #127](https://github.com/funilrys/PyFunceble/issues/127).

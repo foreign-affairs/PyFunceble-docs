@@ -42,7 +42,7 @@ the usage of multiple sources which are for example - to only list a few:
 - the WHOIS record(s).
 - the DNS record(s).
 - the HTTP status code.
-- a community currated list of **special** rules.
+- a community curated list of **special** rules.
 
 PyFunceble can be included in your existing project through:
 
@@ -50,8 +50,7 @@ PyFunceble can be included in your existing project through:
 
 [//]: # (TODO: Re-enable the link to the API)
 
-- its `[Python
-  API](./develop/api-references/index.md)`.
+- its `[Python API](./develop/api-references/index.md)`.
 - the [PyFunceble
   web-worker](https://github.com/pyfunceble/web-worker) (beta) project that
   provides the core functionalities of PyFunceble behind a web API.
