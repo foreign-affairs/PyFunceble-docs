@@ -24,13 +24,13 @@ as soon as possible, you should prefer the `pyfunceble-dev` package.
 
 ## Overview: Installation Method
 
-| OS        | Technology                  | Tools        | Link                                 |
-|-----------|-----------------------------|--------------|--------------------------------------|
-| Any       | PyPi - Python Package Index | `pip3`       | [Link](#pypi---python-package-index) |
-| Any       | Container Image Registry    | `docker`     | [Link](#container-image-registry)    |
-| Any       | Git                         | `pip3`       | [Link](#git-repository)              |
-| Any       | Zip File                    | `pip3`       | [Link](#from-source)                 |
-| ArchLinux | AUR Helper                  | `aur-helper` | [Link](#arch-linux)                  |
+| OS        | Technology                  | Tools        | Link                               |
+| --------- | --------------------------- | ------------ | ---------------------------------- |
+| Any       | PyPi - Python Package Index | `pip3`       | [Link](#pypi-python-package-index) |
+| Any       | Container Image Registry    | `docker`     | [Link](#container-image-registry)  |
+| Any       | Git                         | `pip3`       | [Link](#git-repository)            |
+| Any       | Zip File                    | `pip3`       | [Link](#from-source)               |
+| ArchLinux | AUR Helper                  | `aur-helper` | [Link](#arch-linux)                |
 
 ## PyPi - Python Package Index
 
@@ -40,7 +40,7 @@ after the OS specific packages _(see below)_.
 Here is an overview of the packages and where they are hosted.
 
 | Package        | PyPi Link                                                                       |
-|----------------|---------------------------------------------------------------------------------|
+| -------------- | ------------------------------------------------------------------------------- |
 | pyfunceble     | [https://pypi.org/project/PyFunceble](https://pypi.org/project/PyFunceble)      |
 | pyfunceble-dev | [https://pypi.org/project/PyFunceblee-dev](https://pypi.org/project/PyFunceble) |
 
@@ -89,7 +89,7 @@ is available. :smile:
 Here is an overview of the packages and where they are hosted.
 
 | Host       | Package        | Link                                                                                                     |
-|------------|----------------|----------------------------------------------------------------------------------------------------------|
+| ---------- | -------------- | -------------------------------------------------------------------------------------------------------- |
 | Docker Hub | pyfunceble     | [https://hub.docker.com/r/pyfunceble/pyfunceble](https://hub.docker.com/r/pyfunceble/pyfunceble)         |
 | Docker Hub | pyfunceble-dev | [https://hub.docker.com/r/pyfunceble/pyfunceble-dev](https://hub.docker.com/r/pyfunceble/pyfunceble-dev) |
 
@@ -121,7 +121,7 @@ ArchLinux.
 Here is an overview of the packages and where they are hosted.
 
 | Package        | AUR Link                                                                                               |
-|----------------|--------------------------------------------------------------------------------------------------------|
+| -------------- | ------------------------------------------------------------------------------------------------------ |
 | pyfunceble     | [https://aur.archlinux.org/packages/pyfunceble](https://aur.archlinux.org/packages/pyfunceble)         |
 | pyfunceble-dev | [https://aur.archlinux.org/packages/pyfunceble-dev](https://aur.archlinux.org/packages/pyfunceble-dev) |
 
@@ -167,18 +167,15 @@ makepkg -fsri
 
 ## Git Repository
 
-Installing from a Git Repository with `pip3` is not recommended for general user
-as
-you will easily get the latest development patches even before they get
-published. But if you
-are one of those who always want to be in sync with the latest development
-patches,
-this is probably for you.
+Installing from a Git Repository with `pip3` is not recommended for general
+users as you will easily get the latest development patches even before they
+get published. But if you are one of those who always want to be in sync with
+the latest development patches, this is probably for you.
 
 Here is an overview of the packages and where they are hosted.
 
 | Host   | Package        | Repository                                                              |
-|--------|----------------|-------------------------------------------------------------------------|
+| ------ | -------------- | ----------------------------------------------------------------------- |
 | GitHub | pyfunceble     | `git+https://github.com/funilrys/PyFunceble.git@master#egg=PyFunceble`  |
 | GitHub | pyfunceble-dev | `git+https://github.com/funilrys/PyFunceble.git@dev#egg=PyFunceble-dev` |
 | GitLab | pyfunceble     | `git+https://gitlab.com/funilrys/PyFunceble.git@master#egg=PyFunceble`  |
@@ -242,7 +239,7 @@ up-to-date by yourself.
 Here is an overview of the packages and where they are hosted.
 
 | Host   | Package        | Branch   | Repository                                                                                               |
-|--------|----------------|----------|----------------------------------------------------------------------------------------------------------|
+| ------ | -------------- | -------- | -------------------------------------------------------------------------------------------------------- |
 | GitHub | pyfunceble     | `master` | [https://github.com/funilrys/PyFunceble/tree/master](https://github.com/funilrys/PyFunceble/tree/master) |
 | GitHub | pyfunceble-dev | `dev`    | [https://github.com/funilrys/PyFunceble/tree/dev](https://github.com/funilrys/PyFunceble/tree/dev)       |
 | GitLab | pyfunceble     | `master` | [https://gitlab.com/funilrys/PyFunceble/tree/master](https://gitlab.com/funilrys/PyFunceble/tree/master) |
