@@ -447,8 +447,8 @@ DEFAULT_CONFIG: dict = {
         "self_managed": False,
     },
     "links": {
-        "api_date_format": "https://pyfunceble.funilrys.com/api/date-format",
-        "api_no_referrer": "https://pyfunceble.funilrys.com/api/no-referrer",
+        # Keep this for the sake of the tests - and future reference.
+        "example": "https://example.org",
     },
     "lookup": {
         "dns": True,
