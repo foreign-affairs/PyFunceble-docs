@@ -13,32 +13,23 @@ number of used builtin features are missing and were first introduced in Python
 Here are some of the message you might experience:
 
 ```python
-Fatal
-Error: type
-object
-'datetime.datetime'
-has
-no
-attribute
-'fromisoformat'
+Fatal Error: type object 'datetime.datetime' has no attribute 'fromisoformat'
 ```
 
 ```python
-ModuleNotFoundError: No
-module
-named
-'dataclasses'
+ModuleNotFoundError: No module named 'dataclasses'
 ```
 
 ## PyFunceble CLI
 
-### Combination of `-f`, `-uf` and `--adblock`
+### Combination of test sources
 
 You can't use the following arguments simultaneously:
 
+- `--adblock`
 - `-f` | `--file`
 - `-uf` | `--url-file`
-- `--adblock`
+- `--syntax`
 
 ### SQL Error: Missing default value
 
@@ -52,11 +43,10 @@ SQL Error [1364][HY000]: (conn=12345678) Field 'created_at' doesn't have a defau
         Field 'created_at' doesn't have a default value
 ```
 
-The issue arises from the way PyFunceble
-configures [SQLAlchemy](https://www.sqlalchemy.org/) as PyFunceble is assuming
-the full control
-of the datasets by setting the default on the software side and not in
-the database.
+The issue arises from the way PyFunceble configures 
+[SQLAlchemy](https://www.sqlalchemy.org/) as PyFunceble is assuming
+the full control of the datasets by setting the default on the software
+side and not in the database.
 
 To solve the issue, you will have to manually set the default for `created_at`
 to for example `2020-12-22 09:09:50` in `pyfunceble_whois_record` table.
@@ -77,8 +67,7 @@ ALTER TABLE pyfunceble_whois_record
 #### Ubuntu 20.04.1 LTS - Focal
 
 In Ubuntu 20.04, the dynamicly linked library named `libffi.so.6` has been
-replaced
-with `libffi.so.7`.
+replaced with `libffi.so.7`.
 
 This means that PyFunceble will throw such errors:
 
@@ -116,7 +105,7 @@ If however you intend to run PyFunceble through Cygwin, you have to manually
 define the `PATH` (as Cygwin won't follow the system-wide settings) or use
 the absolute path of the PyFunceble executable.
 
-!!! note ""
+!!! note "note"
 
     Since this issue is not directly related to PyFunceble, you may document
     yourself throught the [issue #127](https://github.com/funilrys/PyFunceble/issues/127).

@@ -23,7 +23,7 @@ few:
 PyFunceble can be included in your existing project through:
 
 - its standard built-in CLI implementation.
-- its [Python
+- it's [Python
   API](https://pyfunceble.readthedocs.io/en/dev/api/index.html).
 - the [PyFunceble
   web-worker](https://github.com/pyfunceble/web-worker) project that
@@ -43,37 +43,39 @@ Happy testing with PyFunceble!
 
 # Table of Content
 
-- [The tool to check the availability or syntax of domain, IP or URL](#the-tool-to-check-the-availability-or-syntax-of-domain-ip-or-url)
-- [Table of Content](#table-of-content)
-- [Installation](#installation)
-  - [Packages \& Versioning](#packages--versioning)
-  - [PyPi - Python Package Index](#pypi---python-package-index)
-    - [pyfunceble](#pyfunceble)
-    - [pyfunceble-dev](#pyfunceble-dev)
-  - [Container Image Registry](#container-image-registry)
-    - [pyfunceble](#pyfunceble-1)
-      - [Docker Hub](#docker-hub)
-    - [pyfunceble-dev](#pyfunceble-dev-1)
-      - [Docker Hub](#docker-hub-1)
-  - [ArchLinux](#archlinux)
-  - [Git Repository](#git-repository)
-    - [pyfunceble](#pyfunceble-2)
-      - [GitHub](#github)
-      - [GitLab](#gitlab)
-    - [pyfunceble-dev](#pyfunceble-dev-2)
-      - [GitHub](#github-1)
-      - [GitLab](#gitlab-1)
-  - [From Source](#from-source)
-- [Usage](#usage)
-  - [Common Setups](#common-setups)
-  - [Container Image Setups](#container-image-setups)
-    - [Data Persitence](#data-persitence)
-  - [Common Examples](#common-examples)
-- [Documentation as the place to be!](#documentation-as-the-place-to-be)
-- [Supporting the project](#supporting-the-project)
-- [Contributors](#contributors)
-- [Special Thanks](#special-thanks)
-- [License](#license)
+<!-- TOC -->
+* [The tool to check the availability or syntax of domain, IP or URL](#the-tool-to-check-the-availability-or-syntax-of-domain-ip-or-url)
+* [Table of Content](#table-of-content)
+* [Installation](#installation)
+  * [Packages & Versioning](#packages--versioning)
+  * [PyPi - Python Package Index](#pypi---python-package-index)
+    * [pyfunceble](#pyfunceble)
+    * [pyfunceble-dev](#pyfunceble-dev)
+  * [Container Image Registry](#container-image-registry)
+    * [pyfunceble](#pyfunceble-1)
+      * [Docker Hub](#docker-hub)
+    * [pyfunceble-dev](#pyfunceble-dev-1)
+      * [Docker Hub](#docker-hub-1)
+  * [ArchLinux](#archlinux)
+  * [Git Repository](#git-repository)
+    * [pyfunceble](#pyfunceble-2)
+      * [GitHub](#github)
+      * [GitLab](#gitlab)
+    * [pyfunceble-dev](#pyfunceble-dev-2)
+      * [GitHub](#github-1)
+      * [GitLab](#gitlab-1)
+  * [From Source](#from-source)
+* [Usage](#usage)
+  * [Common Setups](#common-setups)
+  * [Container Image Setups](#container-image-setups)
+    * [Data Persistence](#data-persistence)
+  * [Common Examples](#common-examples)
+* [Documentation as the place to be!](#documentation-as-the-place-to-be)
+* [Supporting the project](#supporting-the-project)
+* [Contributors](#contributors)
+* [Special Thanks](#special-thanks)
+* [License](#license)
+<!-- TOC -->
 
 
 # Installation
@@ -83,7 +85,7 @@ Happy testing with PyFunceble!
 This project follows the semver standard.
 
 PyFunceble is distributed through 2 packages that reflects our 2 main development and
-deployment branches. Both packages are stable but with 2 different phylosophies.
+deployment branches. Both packages are stable but with 2 different philosophies.
 Therefore, the choice is up to you.
 
 The 2 packages are `pyfunceble` and `pyfunceble-dev`.
@@ -105,13 +107,13 @@ you should prefer the `pyfunceble-dev` package.
 
 ## PyPi - Python Package Index
 
-Installing from the Python Package Index is for most people the prefered one - after
+Installing from the Python Package Index is for most people the preferred one - after
 the OS specific packages _(see below)_.
 
 Here is an overview of the packages and where they are hosted.
 
 | Package        | PyPi Link                                |
-|----------------|------------------------------------------|
+| -------------- | ---------------------------------------- |
 | pyfunceble     | https://pypi.org/project/PyFunceble      |
 | pyfunceble-dev | https://pypi.org/project/PyFunceblee-dev |
 
@@ -147,7 +149,7 @@ is available. :smile:
 Here is an overview of the packages and where they are hosted.
 
 | Host       | Package        | Link                                                                                                     |
-|------------|----------------|----------------------------------------------------------------------------------------------------------|
+| ---------- | -------------- | -------------------------------------------------------------------------------------------------------- |
 | Docker Hub | pyfunceble     | [https://hub.docker.com/r/pyfunceble/pyfunceble](https://hub.docker.com/r/pyfunceble/pyfunceble)         |
 | Docker Hub | pyfunceble-dev | [https://hub.docker.com/r/pyfunceble/pyfunceble-dev](https://hub.docker.com/r/pyfunceble/pyfunceble-dev) |
 
@@ -282,7 +284,7 @@ docker run -it pyfunceble/pyfunceble[-dev] --help
 
 **Beware:** if the first parameter starts with a slash (`/`), the entrypoint will assume that you want to run a command within the container.
 
-### Data Persitence
+### Data Persistence
 
 If you wish to persist your data, you simply have to mount a volume to the `/home/pyfunceble` directory.
 
@@ -359,7 +361,7 @@ pip install --user -r requirements.docs.txt
 # Serve documentation locally.
 mkdocs serve
 # Open Documentation with browser.
-palemoon http://127.0.0.1:8000
+firefox http://127.0.0.1:8000
 ```
 
 **NOTE:** You are also invited to submit changes and improvement to the
@@ -371,7 +373,7 @@ documentation through a new Pull Request.
 [Dead-Hosts](https://github.com/dead-hosts), [adblock-decoder](https://github.com/pyunceble/adblock-decoder)
 and all other analog projects are powered by free time and a lot of coffee!
 
-This project helps you and you have to possibility to help back financially?
+This project helps you, and you have to possibility to help back financially?
 Sponsor [@funilrys](https://github.com/funilrys) through the GitHub Sponsor
 program by clicking the image below!
 
@@ -440,7 +442,7 @@ Thanks to those awesome organization(s), tool(s) and or people(s) for
 - Their current work/purpose
 - Their promotion of Py-Funceble
 - Their support
-- Their testings reports
+- Their testings report
 
 which helped and/or still help me build, test and or make
 [PyFunceble](https://github.com/funilrys/PyFunceble) a better tool.
